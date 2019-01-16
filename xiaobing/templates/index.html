@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ch">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="小冰QQ飞车截图机器人">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>小冰QQ飞车截图机器人</title>
+
+    <link href="../static/bootstrap-jq/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap-jq/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap-jq/css/flat-ui.min.css"/>
+    <link rel="stylesheet" href="../static/bootstrap-jq/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/bootstrap-jq/css/ace.min.css">
+    <link rel="stylesheet" href="../static/bootstrap-jq/css/fonts.googleapis.com.css">
+    <link rel="stylesheet" href="../static/bootstrap-jq/user-defined/user-defined.css">
+    <script src="../static/bootstrap-jq/user-defined/user-defined.js"></script>
+</head>
+
+<body>
+
+<div class="navbar navbar-default ace-save-state">
+    <div class="navbar-container ace-save-state" id="navbar-container">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand center">
+                <small>
+                    小冰QQ飞车截图机器人
+                </small>
+            </a>
+        </div>
+    </div>
+</div>
+
+<ul class="nav nav-pills" id="tab_header">
+
+</ul>
+
+<div class="leftMeun" id="leftMeun" style="overflow-y: scroll;">
+
+</div>
+
+<div class="rightContent" style="overflow-y: scroll;">
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="list-group">
+
+                    <div id="content2" class="list-group-item">
+
+                    </div>
+                    <hr>
+                    <div id="content1" class="list-group-item">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script src="../static/bootstrap-jq/js/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="../static/bootstrap-jq/js/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../static/bootstrap-jq/user-defined/user-defined.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+        $(".meun-item").click(function () {
+            $(".meun-item").removeClass("meun-item-active");
+            $(this).addClass("meun-item-active");
+        });
+        $("#leftMeun").toggleClass("show");
+
+        xiaobing.initTopTab();
+
+        $("#content2").height(100);
+        $("#content1").height(($("#leftMeun").height() - $("#content2").height()) * 0.80);
+    })
+</script>
+</html>

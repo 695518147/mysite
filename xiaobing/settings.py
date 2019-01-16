@@ -1,0 +1,1 @@
+MEDIA_ROOT=['/Users/zhangpeiyu/zhangpeiyu/pyproject/django_demo/xiaobing']

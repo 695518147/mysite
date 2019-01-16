@@ -1,0 +1,500 @@
+{
+  "jtzl": [
+    {
+      "orderId":"jtdx",
+      "orderName":"截图电信",
+      "orderDescription":"<b>指令说明：</b><br>查看发送指令QQ在电信区的概况信息",
+      "typeDescription":"“电信”可以替换成：联通 电二 <br/>“车队”可换成：后花园/排位赛/积累/车队/城邦/车鉴/对战/成就/精灵/动态/鱼坊/伴侣/徒弟/紫钻/钻皇/宝宝/宠物/着装度 <br/>他人昵称截图或查询时，QQ号码可替换为（昵称），切记昵称需要加（） 如：截图电信（爱情）",
+      "number":"1",
+      "goto":""
+    },
+    {
+      "orderId":"jtdxcd",
+      "orderName":"截图电信<font color='#00FF00'>车队</font>",
+      "orderDescription":"<b>指令说明：</b><br>查看发送指令QQ在电信区的车队资料信息",
+      "typeDescription":"“电信”可以替换成：联通 电二 <br/>“车队”可换成：后花园/排位赛/积累/车队/城邦/车鉴/对战/成就/精灵/动态/鱼坊/伴侣/徒弟/紫钻/钻皇/宝宝/宠物/着装度 <br/>他人昵称截图或查询时，QQ号码可替换为（昵称），切记昵称需要加（） 如：截图电信（爱情）",
+      "number":"1",
+      "goto":""
+    },
+    {
+      "orderId":"jtdxqq",
+      "orderName":"截图电信QQ ",
+      "typeDescription":"“电信”可以替换成：联通 电二 <br/>“车队”可换成：后花园/排位赛/积累/车队/城邦/车鉴/对战/成就/精灵/动态/鱼坊/伴侣/徒弟/紫钻/钻皇/宝宝/宠物/着装度 <br/>他人昵称截图或查询时，QQ号码可替换为（昵称），切记昵称需要加（） 如：截图电信（爱情）",
+      "orderDescription":"<b>指令说明：</b><br>查看他人QQ在电信区的概况信息",
+      "number":"2",
+      "goto":""
+    },
+    {
+      "orderId":"jtltqqcd",
+      "orderName":"截图联通QQ<font color='#00FF00 '>车队</font>",
+      "typeDescription":"“电信”可以替换成：联通 电二 <br/>",
+      "orderDescription":"<b>指令说明：</b><br>查看他人QQ在联通区的车队资料信息",
+      "number":"2",
+      "goto":""
+    },
+    {
+      "orderId":"cxdx",
+      "orderName":"查询电信",
+      "typeDescription":"“电信”可以替换成：联通 电二 <br/>",
+      "orderDescription":"<b>指令说明：</b><br>查询发送指令QQ在电信区点券消费券信息",
+      "number":"2",
+      "goto":""
+    },
+    {
+      "orderId":"cxdxqq",
+      "orderName":"查询电信QQ",
+      "typeDescription":"“电信”可以替换成：联通 电二 <br/>",
+      "orderDescription":"<b>指令说明：</b><br>查询他人QQ在电信区点券消费券信息",
+      "number":"2",
+      "goto":""
+    },
+    {
+      "orderId":"cxdxqqnc",
+      "orderName":"查询联通（昵称）",
+      "typeDescription":"“电信”可以替换成：联通 电二 <br/>",
+      "orderDescription":"<b>指令说明：</b><br>查询指定昵称在电信区点券消费券及隐藏QQ",
+      "number":"2",
+      "goto":""
+    },
+    {
+      "orderId":"jtsctj",
+      "orderName":"截图商城<font color='#00FF00 '>推荐</font>",
+      "typeDescription":"“推荐”可换成：活动/魅力/赛车/装扮/功能/宠物/宝石/非卖/紫钻装扮/紫钻发饰 <br/>“女”可替换成：男/女    <br/>指定道具需要加（）\n",
+      "orderDescription":"<b>指令说明：</b><br>截图飞车商城推荐前6页物品信息",
+      "number":"2",
+      "goto":""
+    },
+    {
+      "orderId":"jtscnzb",
+      "orderName":"截图商城<font color='#00FF00 '>女装扮</font>",
+      "typeDescription":"“推荐”可换成：活动/魅力/赛车/装扮/功能/宠物/宝石/非卖/紫钻装扮/紫钻发饰 <br/>“女”可替换成：男/女    <br/>指定道具需要加（）\n",
+      "orderDescription":"<b>指令说明：</b><br>截图飞车商城女性装扮前6页物品信息",
+      "number":"2",
+      "goto":""
+    },
+    {
+      "orderId":"jtscdjm",
+      "orderName":"截图商城（<font color='#00FF00 '>道具名</font>）",
+      "typeDescription":"指定道具需要加（）\n",
+      "orderDescription":"<b>指令说明：</b><br>搜索指定道具显示的价格及描述信息等",
+      "number":"2",
+      "goto":""
+    },
+    {
+      "orderId":"jtscndjm",
+      "orderName":"截图商城女（<font color='#00FF00 '>道具名#2</font>）",
+      "typeDescription":"“女”可替换成：男/女    <br/>指定道具需要加（）<br/>#2可替换成#3 #4 #5 #6",
+      "orderDescription":"<b>指令说明：</b><br>搜索指定道具物品在第二物品栏时的详情",
+      "number":"2",
+      "goto":""
+    },
+    {
+      "orderId":"jtltdjhr",
+      "orderName":"截图联通<font color='#00FF00 '>等级红人</font>",
+      "typeDescription":"左侧的“等级红人”可替换成：魅力红人/等级红人/荣誉红人/宠物战力/珍宝红人/多宠天梯/幸运红人/跨服幸运赛/大宝达人/二宝达人/辉煌之路/辉煌总积分/拉力红人/拉力总RL/星光红人/车队荣誉/赛季战勋/竞技红人/冠军红人/成就红人/回馈红人/火线红人/淘汰赛红人/车队总荣誉/战勋红人/进阶改装/后花园红人/钻皇红人/情侣贵族/皇族红人/车队贵族/红包达人/人气红人/火力红人/宝石红人/恩爱红人/情侣红人/名师红人/改装红人/舞蹈红人/养鱼红人/鲜花红人/酷币红人/日火力红人/日魅力红人/日赠送红人/周魅力红人/月魅力红人/日喇叭红人/周喇叭红人/日表白红人/周表白红人/日祝福红人/周祝福红人\n",
+      "orderDescription":"<b>指令说明：</b><br>截图联通区所有的等级红人排名信息\n",
+      "number":"2",
+      "goto":""
+    },
+    {
+      "orderId":"bz",
+      "orderName":"帮助",
+      "typeDescription":"群成员每N秒内只能查询一次，重复发送会忽略。只时间为后台统一设置，无法自行修改",
+      "orderDescription":"<b>指令说明：</b><br>机器人会发送指令说明网站，请点击网站查看具体操作指令",
+      "number":"2",
+      "goto":""
+    },
+    {
+      "orderId":"cxhd",
+      "orderName":"查询活动",
+      "typeDescription":"群成员每N秒内只能查询一次",
+      "orderDescription":"<b>指令说明：</b><br>显示本周活动倍数以及奖励情况信息，群成员每N秒内只能查询一次，重复发送会忽略",
+      "number":"2",
+      "goto":""
+    },
+    {
+      "orderId":"dgzdqc",
+      "orderName":"点歌纸短情长",
+      "typeDescription":"群成员每N秒内只能查询一次，重复发送会忽略。此时间为后台统一设置，无法自行修改",
+      "orderDescription":"<b>指令说明：</b><br>机器人会发送歌曲“纸短情长”",
+      "number":"2",
+      "goto":""
+    }
+  ],
+
+
+  "rwzl": [
+    {
+      "orderId":"szhm1669091",
+      "orderName":"设置号码1669091",
+      "orderDescription":"<b>指令说明：</b><br>账号密码私聊发送给机器人，群内会有对应提示",
+      "typeDescription": "右侧的分行格式也可一体发送，格式如下：<br/>\n设置号码166909129----zxc12345<br/>\n设置号码1669091----zxc12345----123456<br/>\n注意：中间为4个减号，非破折号，一体格式密码不支持含有“-”",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"szmmzxc12345",
+      "orderName":"设置密码zxc12345",
+      "orderDescription":"<b>指令说明：</b><br>账号密码私聊发送给机器人，群内会有对应提示",
+      "typeDescription": "右侧的分行格式也可一体发送，格式如下：<br/>\n设置号码166909129----zxc12345<br/>\n设置号码1669091----zxc12345----123456<br/>\n注意：中间为4个减号，非破折号，一体格式密码不支持含有“-”",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"szej123456",
+      "orderName":"设置二级123456",
+      "orderDescription":"<b>指令说明：</b><br>账号密码私聊发送给机器人，群内会有对应提示",
+      "typeDescription": "右侧的分行格式也可一体发送，格式如下：<br/>\n设置号码166909129----zxc12345<br/>\n设置号码1669091----zxc12345----123456<br/>\n注意：中间为4个减号，非破折号，一体格式密码不支持含有“-”",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"shdx",
+      "orderName":"上号电信",
+      "orderDescription":"<b>指令说明：</b><br>执行目前机器人已有的所有的上号任务，一键化操作【不包含消费操作】",
+      "typeDescription": "",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"shdxqd",
+      "orderName":"上号电信<font color='#00FF00'>签到</font>",
+      "orderDescription":"<b>指令说明：</b><br>执行飞车每日签到任务",
+      "typeDescription": "",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"shdxgx",
+      "orderName":"上号电信<font color='#00FF00'>更新</font>",
+      "orderDescription":"<b>指令说明：</b><br>执行新版本更新后可获得点券奖励任务",
+      "typeDescription": "",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"shdxetd",
+      "orderName":"上号电二<font color='#00FF00'>徒弟</font>",
+      "orderDescription":"<b>指令说明：</b><br>执行领取徒弟获得点券消费券奖励任务",
+      "typeDescription": "",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"shdxbb",
+      "orderName":"上号电信<font color='#00FF00'>宝宝</font>",
+      "orderDescription":"<b>指令说明：</b><br>执行飞车情侣空间里情缘水晶、宝宝喂养、玩耍、清洁、跳舞、拍照等任务",
+      "typeDescription": "",
+      "number":"1",
+      "goto":""
+    },
+    {
+      "orderId":"shlthh",
+      "orderName":"上号联通<font color='#00FF00'>航海</font>",
+      "orderDescription":"<b>指令说明：</b><br>执行小木筏航海任务，航海过程中自动搓澡",
+      "typeDescription": "",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"shltcd",
+      "orderName":"上号联通<font color='#00FF00'>车队</font>",
+      "orderDescription":"<b>指令说明：</b><br>执行车队红包等一系列任务",
+      "typeDescription": "",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"shdxcw",
+      "orderName":"上号电信<font color='#00FF00'>宠物</font>",
+      "orderDescription":"<b>指令说明：</b><br>执行宠物对战等一系列任务",
+      "typeDescription": "",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"shdxxfy",
+      "orderName":"上号电信<font color='#00FF00'>消费一（道具名）</font>",
+      "orderDescription":"<b>指令说明：</b><br>购买指定道具，（）里的道具名确保商城里可搜索到，且在第一物品栏位置",
+      "typeDescription": "消费一（道具名）可替换成消费二（道具名） 消费三（道具名） 消费四（道具名*数量）<br/>\n\n消费一（道具名）：只用消费券<br/>\u200B\n\n消费二（道具名）：部分点券+用光消费券<br/>\u200B\n\n消费三（道具名）：点券+消费券 全部用光<br/>\u200B\n\n消费四（道具名*数量）：购买指定数量的道具  如：上号电信消费四（喷喷杀虫剂*20）",
+      "number":"1",
+      "goto":""
+    },
+    {
+      "orderId":"zndxtd",
+      "orderName":"智能电信<font color='#00FF00'>徒弟</font>",
+      "orderDescription":"<b>指令说明：</b><br>智能操作，全程托管模式。每隔12小时自动上号领取徒弟奖励",
+      "typeDescription": "",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"znltbb",
+      "orderName":"智能联通<font color='#00FF00'>宝宝</font>",
+      "orderDescription":"<b>指令说明：</b><br>智能操作，宝宝一天自动上号3次学习，执行喂养、清洁、玩耍等",
+      "typeDescription": "",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"gbznms",
+      "orderName":"关闭智能模式",
+      "orderDescription":"<b>指令说明：</b><br>关闭智能宝宝和智能徒弟模式",
+      "typeDescription": "",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"dzlcz",
+      "orderName":"<font color='blue'>多指令操作</font>",
+      "orderDescription":"右侧绿色标签指令文字可随意叠加搭配使用<br/>如：上号电信签到宝宝   即为签到和宝宝2个任务一起操作",
+      "typeDescription": "如临时操作其他账号可用以下格式：<br/>上号电信签到166909129----zxc12345<br/>只需在指令后添加完整格式的账号密码即可",
+      "number":"1",
+      "goto":""
+    }
+  ],
+  "jdms": [
+    {
+      "orderId":"zsgrjd",
+      "orderName":"赠送<font color='red'>@该人</font>金豆50个",
+      "orderDescription":"<b>指令说明：</b><br>群里艾特这个人赠送金豆50个，数量可自定义其他",
+      "typeDescription":"",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"cxgrjd",
+      "orderName":"查询个人金豆",
+      "orderDescription":"<b>指令说明：</b><br>查询自己剩余多少金豆",
+      "typeDescription":"",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"shdxxt",
+      "orderName":"上号电信收徒",
+      "orderDescription":"<b>指令说明：</b><br>机器人登录账号，收取该账号当天最大数量",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"shdxxt20",
+      "orderName":"上号电信收徒20",
+      "orderDescription":"<b>指令说明：</b><br>累计收20个徒弟，机器人登录账号，当天收取上限，次日接着安排，以此类推",
+      "number":"1",
+      "goto":""
+    },
+    {
+      "orderId":"shdxzx",
+      "orderName":"上号电信在线",
+      "orderDescription":"<b>指令说明：</b>周末活动2小时在线，每次扣除N个金豆，一般价格为5-20个金豆左右。<br/>在线上号时间：13:40:00\n<br/>在线下号时间：16:05:00<br>",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"cxzxrw",
+      "orderName":"查询在线任务",
+      "orderDescription":"<b>指令说明：</b><br>显示在线任务的账号、大区、状态、上号时间、下号时间等信息情况",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"qxzxrw",
+      "orderName":"取消在线任务",
+      "orderDescription":"<b>指令说明：</b><br>删除预约的在线任务(正在挂号中时不能删除)，退还预约时扣除的金豆",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"shdxzy",
+      "orderName":"上号电信专业",
+      "orderDescription":"<b>指令说明：</b><br>周末活动时间飞车边境专业频道挂输",
+      "typeDescription":"“专业”可替换成“初级”、“高级”",
+      "number":"1",
+      "goto":""
+    },
+    {
+      "orderId":"cxbjrw",
+      "orderName":"查询边境任务",
+      "orderDescription":"<b>指令说明：</b><br>显示边境任务的账号、大区、状态、上号时间、下号时间等信息情况",
+      "typeDescription":"",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"qxbjrw",
+      "orderName":"取消边境任务",
+      "orderDescription":"<b>指令说明：</b><br>删除预约的边境任务(正在挂号中时不能删除)，退还预约时扣除的金豆",
+      "typeDescription":"",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"bmzc",
+      "orderName":"报名众筹任务",
+      "orderDescription":"<b>指令说明：</b><br>",
+      "typeDescription":"",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"jxzc",
+      "orderName":"揭晓众筹任务",
+      "orderDescription":"<b>指令说明：</b><br>",
+      "typeDescription":"",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"bmcj",
+      "orderName":"报名抽奖任务",
+      "orderDescription":"<b>指令说明：</b><br>",
+      "typeDescription":"",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"jxcj",
+      "orderName":"揭晓抽奖任务",
+      "orderDescription":"<b>指令说明：</b><br>",
+      "typeDescription":"",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"qzqxrw",
+      "orderName":"强制取消任务",
+      "orderDescription":"<b>指令说明：</b><br>针对中途已经正在执行的账号，可以强制取消，不然一直顶号，不退还金豆",
+      "typeDescription":"",
+      "number":"1",
+      "goto":""
+    }
+  ],
+  "yysd": [
+    {
+      "orderId":"jtzlcd4",
+      "orderName":"截图电信车队3",
+      "orderDescription":"<b>指令说明：</b><br>",
+      "typeDescription":"",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"jtdxqq4",
+      "orderName":"截图电信QQ3",
+      "typeDescription":"",
+      "orderDescription":"<b>指令说明：</b><br>",
+      "number":"2",
+      "goto":""
+    }
+  ],
+  "glzl": [
+    {
+      "orderId":"kqjt",
+      "orderName":"开启截图",
+      "orderDescription":"<b>指令说明：</b><br>开启群内的截图功能",
+      "typeDescription":"",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"gbjt",
+      "orderName":"关闭截图",
+      "orderDescription":"<b>指令说明：</b><br>关闭群内的截图功能",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"kqrw",
+      "orderName":"开启任务",
+      "orderDescription":"<b>指令说明：</b><br>开启群内的上号功能",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"gbrw",
+      "orderName":"关闭任务",
+      "orderDescription":"<b>指令说明：</b><br>关闭群内的上号功能",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"kqdg",
+      "orderName":"开启点歌",
+      "orderDescription":"<b>指令说明：</b><br>开启群内的点歌功能",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"gbdg",
+      "orderName":"关闭点歌",
+      "orderDescription":"<b>指令说明：</b><br>关闭群内的点歌功能",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"szpl",
+      "orderName":"设置频率20秒",
+      "orderDescription":"<b>指令说明：</b><br>截图查询的冷却时间为20秒，这里可以自己设置其他数字(范围取值0-999)",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"szcs20",
+      "orderName":"设置次数20次",
+      "orderDescription":"<b>指令说明：</b><br>设置群内每个人可以截图和查询的次数共为20次（范围取值0-999之间）",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"kqhzwz",
+      "orderName":"开启后缀文字：你好",
+      "orderDescription":"<b>指令说明：</b><br>截图时图片底部显示设置的文字信息为“你好”",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"gbhzwz",
+      "orderName":" 关闭后缀文字",
+      "orderDescription":"<b>指令说明：</b><br>关闭截图图片时底部文字",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"kqhyy",
+      "orderName":"开启欢迎语：欢迎进群",
+      "orderDescription":"<b>指令说明：</b><br>新人进群时，机器人会艾特该成员，并提示：欢迎进群",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"gbhyy",
+      "orderName":"关闭欢迎语",
+      "orderDescription":"<b>指令说明：</b><br>关闭新人进群时艾特提示功能",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"kqglqx",
+      "orderName":"开启管理员特权",
+      "orderDescription":"<b>指令说明：</b><br>开启后群内管理员截图享有截图不限制特权",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"gbglqx",
+      "orderName":"关闭管理员特权",
+      "orderDescription":"<b>指令说明：</b><br>关闭后群内管理员截图截图没有特权",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"hmdjccyqq",
+      "orderName":"黑名单增加成员QQ",
+      "orderDescription":"<b>指令说明：</b><br>将该QQ列入黑名单，不接受其指令",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"hmdsccy",
+      "orderName":"黑名单删除成员QQ",
+      "orderDescription":"<b>指令说明：</b><br>将该QQ取消黑名单",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"hmdscqbcy",
+      "orderName":"黑名单删除全部成员",
+      "orderDescription":"<b>指令说明：</b><br>将黑名单里面的成员全部删除",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"hmdckcy",
+      "orderName":"黑名单查看成员",
+      "orderDescription":"<b>指令说明：</b><br>显示所有黑名单成员",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"cxdqsj",
+      "orderName":"查询到期时间",
+      "orderDescription":"<b>指令说明：</b><br>查看机器人在此群的授权到期时间",
+      "number":"1",
+      "goto":""
+    }
+  ],
+  "gmsm": [
+    {
+      "orderId":"jgxq",
+      "orderName":"价格详情",
+      "orderDescription":"",
+      "typeDescription":"<img style='width: 105%;' src='image/jgxq.jpg'/>",
+      "number":"1",
+      "goto":""
+    },{
+      "orderId":"lxfs",
+      "orderName":"联系方式",
+      "orderDescription":"",
+      "typeDescription":"<p>售后请联系小冰Q：166909129<br>\n急事拨打电话：13136567497<br/><font color='red'>续费购买请关注微信公众号：冰魄网游<font></p><img style='width: 105%;' src='image/wxgzh.jpeg'/>",
+      "number":"2",
+      "goto":""
+    }
+  ]
+}

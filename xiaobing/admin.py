@@ -1,0 +1,17 @@
+from django.contrib import admin
+from xiaobing import models
+
+
+# Register your models here.
+# 格式化列表显示
+class OrderPostAdmin(admin.ModelAdmin):
+    list_display = ('orderName', 'createTime', 'number')
+
+
+class OrderTypePostAdmin(admin.ModelAdmin):
+    list_display = ('typeName', 'createTime', 'number')
+
+
+# Register your models here.     注册所创建的模型   用于admin界面的显示
+admin.site.register(models.Order, OrderPostAdmin)
+admin.site.register(models.OrderType, OrderTypePostAdmin)

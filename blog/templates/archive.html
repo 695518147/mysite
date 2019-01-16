@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试3</title>
+
+
+
+    {# Load the tag library #}
+    {% load bootstrap3 %}
+
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    {# Display django.contrib.messages as Bootstrap alerts #}
+    {% bootstrap_messages %}
+
+    <div class="container">
+        {# Display a form #}
+        <br/>
+        <form action="/blog/create/" method="post" class="form">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">
+                    {% bootstrap_icon "star" %} Submit
+                </button>
+            {% endbuttons %}
+        </form>
+    </div>
+    {# Read the documentation for more information #}
+
+
+
+
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.body }}</p>
+        <p>{{ post.timestamp }}</p>
+        <hr/>
+    {% endfor %}
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

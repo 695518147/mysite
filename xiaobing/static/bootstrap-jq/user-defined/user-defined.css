@@ -1,0 +1,105 @@
+.leftMeun {
+    position: relative;
+    box-sizing: border-box;
+    width: 35%;
+    height: 76%;
+    background: #4d5e70 bottom;
+    float: left;
+    height: 630px;
+}
+
+#tab_header p {
+    margin: 0px 0 0px;
+    line-height: 1;
+}
+
+.footer {
+    padding: 30px;
+    margin: 0;
+    float: left;
+}
+
+.topMeun {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    background: rgba(111, 80, 83, 0.81) bottom;
+}
+
+.topMeun div {
+    float: left;
+}
+
+.rightContent {
+    position: relative;
+    box-sizing: border-box;
+    width: 65%;
+    height: 630px;
+    float: left;
+    background-color: #fff;
+}
+
+.btn {
+    padding: 5px;
+    margin: 5px;
+}
+
+ol, ul {
+    padding: 5px;
+    margin: 0 0 20px 0px;
+}
+
+body {
+    line-height: 1;
+}
+
+.navbar {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-width: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    min-height: 45px;
+    background: #438EB9;
+}
+
+.leftMeun > div {
+    padding-left: 10px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+#content1 {
+    line-height: 28px;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#content2 {
+    border: 0px solid #ddd;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    line-height: 28px;
+}
+
+#content1 img{
+    width: 100%;
+}
+
+#content2 img{
+    width: 100%;
+}
+
+#lineHight {
+    margin: 10px auto;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.list-group-item {
+    border: 0px solid #ddd;
+}
