@@ -5,12 +5,61 @@ from django.http import HttpResponseRedirect, HttpResponse
 from xiaobing.models import Order, OrderType
 from xiaobing.forms import OrderForm
 from pypinyin import pinyin, Style
+from django.db.models import Q
+from xiaobing.json import DateEncoder
+import json
+import jieba
 
 
 # Create your views here.pip
 
 def index(request):
     return render(request, "index.html")
+
+
+def test(request):
+    return render(request, "test_datatable.html")
+
+
+def deleteOrder(request):
+    pk = request.GET.get("id")
+    order = Order.objects.get(pk=pk)
+    order.delete()
+    return HttpResponse("")
+
+
+def search(request):
+    if request.method == 'POST':
+        page_length = int(request.POST.get('length', '5'))
+        keyword = request.POST.get("search")
+        sorts = request.POST.get("order")
+        if sorts == "asc":
+            order_by = "createTime"
+        else:
+            order_by = "-createTime"
+        # 分词
+        arr = " ".join(jieba.cut(keyword)).split(" ")
+        q = Q(orderId__icontains=keyword)
+        for kw in arr:
+            q = q | Q(orderName__icontains=kw)
+        total_length = Order.objects.filter(q).count()
+
+        page_start = int(request.POST.get('start', '0'))
+        page_end = page_start + page_length
+        page_data = Order.objects.filter(q).order_by(order_by)[
+                    page_start:page_end]
+        rest = {
+            "iTotalRecords": page_length,  # 本次加载记录数量
+            "iTotalDisplayRecords": total_length,  # 总记录数量
+            "aaData": []}
+        data = []
+        for item in page_data:
+            res = {'id': item.pk, 'typeId': item.typeId, 'orderId': item.orderId, 'orderName': item.orderName,
+                   'orderDescription': item.orderDescription, 'isShowOrder': item.isShowOrder, 'isShow': item.isShow,
+                   'typeDescription': item.typeDescription, 'number': item.number, 'createTime': item.createTime}
+            data.append(res)
+        rest['aaData'] = data
+        return HttpResponse(json.dumps(rest, cls=DateEncoder, ensure_ascii=True), content_type='application/json')
 
 
 def edit(request):
@@ -21,6 +70,8 @@ def edit(request):
 def saveOrder(request):
     if "POST" == request.method:
         typeId = request.POST['typeId']
+        operate = request.POST['operate']
+        pk = request.POST['pk']
         isShow = request.POST['isShow']
         isShowOrder = request.POST['isShowOrder']
         orderName = request.POST['orderName']
@@ -33,10 +84,14 @@ def saveOrder(request):
         orderDescription = request.POST['orderDescription']
         typeDescription = request.POST['typeDescription']
 
+        if "edit" == operate:
+            order = Order.objects.get(pk=pk)
+            order.delete()
         Order.objects.create(typeId=typeId, isShowOrder=isShowOrder, orderId=orderId, isShow=isShow,
                              orderName=orderName,
                              orderDescription=orderDescription,
                              typeDescription=typeDescription, number=number, createTime=datetime.now())
+
     return HttpResponseRedirect("../edit/")
 
 

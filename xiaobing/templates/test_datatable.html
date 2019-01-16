@@ -15,401 +15,180 @@
     <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
     <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
     <script type="text/javascript" charset="utf-8" src="/static/ueditor/lang/zh-cn/zh-cn.js"></script>
-
+    <link type="text/css" href="/static/bootstrap-jq/css/bootstrap.min.css">
     <script type="text/javascript" charset="utf-8"
             src="/static/DataTables-1.10.15/media/js/jquery.dataTables.js"></script>
     <link type="text/css" href="/static/DataTables-1.10.15/media/css/jquery.dataTables.css">
-    <style type="text/css">
-        div {
-            width: 100%;
-        }
-
-        .modal-backdrop {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 1004;
-            background-color: #000;
-        }
-
-        input[type=checkbox], input[type=radio] {
-            margin: 10px 0 0;
-        }
-
-        {#    datatable  #}
-        .table {
-            width: 100%;
-            max-width: 100%;
-            margin-bottom: -9px;
-        }
-    </style>
+    <link type="text/css" href="../static/DataTables-1.10.15/media/css/dataTables.bootstrap.min.css">
 
 </head>
 <body class="container-fluid" style="overflow-x: hidden">
-<div class="panel panel-primary">
-    <div class="panel-heading">指令列表</div>
-    <div class="panel-body">
-        <div class="row">
-            <div class="col-sm-10 col-xs-10">
-                <input type="text" class="form-control" id="search" placeholder="Text input">
-            </div>
-            <div class="col-sm-1 col-xs-1 align-right">
-                <button type="button" class="btn btn-default" onclick="initTable();">搜&nbsp;&nbsp;&nbsp;&nbsp;索</button>
-            </div>
-            <div class="col-sm-1 col-xs-1">
-                <button type="button" class="btn btn-primary" onclick="modalHandler('orderModal')">
-                    新增指令
-                </button>
-            </div>
-        </div>
-        <table id="datatable" class="table display table-border" style="overflow:hidden">
+
+<div class="span12">
+        <table class="display" id="issueTable">
         </table>
     </div>
-</div>
 
-<!-- 指令新增模态框（Modal） -->
-<div class="modal fade bs-example-modal-lg" id="orderModal" tabindex="-9" style="z-index: 1005" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">
-                    新增指令
-                </h4>
-            </div>
-            <div class="modal-body">
-                <div id="orderForm" class="form-horizontal">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label for="typeId" class="col-sm-2 control-label">指令类别</label>
-                        <div class="col-sm-10">
-                            <select class="form-control" id="typeId">
-                            </select><!-- 按钮触发模态框 -->
-                            <button class="btn btn-primary" data-toggle="modal" onclick="modalHandler('myModal')">
-                                新增类别
-                            </button>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="orderName" class="col-sm-2 control-label">指令名称</label>
-                        <div class="col-sm-10" style="height: 20%">
-                            <textarea id="orderName" placeholder="指令名称"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="orderDescription" class="col-sm-2 control-label">是否显示此条指令</label>
-                        <div class="col-sm-10">
-                            <input type="checkbox" id="isShowOrder" name="isShowOrder" checked/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="orderDescription" class="col-sm-2 control-label">指令说明</label>
-                        <div class="col-sm-10">
-                            <textarea id="orderDescription" placeholder="指令说明"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="orderDescription" class="col-sm-2 control-label">是否显示指令说明</label>
-                        <div class="col-sm-10">
-                            <input type="checkbox" id="isShow" name="isShow" checked/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="typeDescription" class="col-sm-2 control-label">类别说明</label>
-                        <div class="col-sm-10">
-                            <textarea id="typeDescription" placeholder="类别说明"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="number" class="col-sm-2 control-label">排序号</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="number" placeholder="排序号" value="99">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
-                </button>
-                <button type="button" id="saveOrderType" onclick="saveOrder()" class="btn btn-primary">
-                    保存
-                </button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal -->
-</div>
-
-<!-- 指令类别新增模态框（Modal） -->
-<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" style="z-index: 1005" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">
-                    新增指令类别
-                </h4>
-            </div>
-            <div class="modal-body">
-                <div id="orderForm" class="form-horizontal">
-                    <div class="form-group">
-                        <label for="typeName" class="col-sm-2 control-label">指令类别名称</label>
-                        <div class="col-sm-10">
-                            <textarea id="typeName" placeholder="指令类别名称"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="typeNumber" class="col-sm-2 control-label">排序号</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="typeNumber" placeholder="排序号" value="99">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
-                </button>
-                <button type="button" id="saveOrderType" onclick="saveOrderType()" class="btn btn-primary">
-                    保存
-                </button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal -->
-</div>
 
 <script type="text/javascript">
-    /**
-     * 模态框显示回调
-     * @param domId
-     */
-    function modalHandler(domId) {
-        $("#" + domId).modal({backdrop: 'static', keyboard: false});
-    }
 
-    $(function () {
-        init();
+    var githubTable;
+    $(document).ready(function () {
 
         //配置DataTables默认参数
         $.extend(true, $.fn.dataTable.defaults, {
-            "language": {
-                "url": "http://www.datatables.club/assets/Chinese.txt"
-            },
+            "language":
+                {
+                    "processing": '<div class="panel-overlay-content unselectable"><span class="panel-overlay-icon text-dark"><i class="fa fa-spinner fa-2x fa-spin"></i></span><h4 class="panel-overlay-title">数据加载中...</h4></div>',
+                    "lengthMenu": "显示 _MENU_ 项结果",
+                    "zeroRecords": "没有匹配结果",
+                    "info": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                    "infoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                    "infoFiltered": "",
+                    "infoPostFix": "",
+                    "search": "搜索:",
+                    "searchPlaceholder": "搜索...",
+                    "url": "",
+                    "emptyTable": "暂无数据",
+                    "loadingRecords": "载入中...",
+                    "infoThousands": ",",
+                    "paginate": {
+                        "first": "首页",
+                        "previous": "上页",
+                        "next": "下页",
+                        "last": "末页"
+                    },
+                    "aria": {
+                        paginate: {
+                            first: '首页',
+                            previous: '上页',
+                            next: '下页',
+                            last: '末页'
+                        },
+                        "sortAscending": ": 以升序排列此列",
+                        "sortDescending": ": 以降序排列此列"
+                    },
+                    "decimal": "-",
+                    "thousands": ","
+
+                },
+
             "dom": "l<'#toolbar'>frtip"
         });
-        console.log("http://www.datatables.club/assets/Chinese.txt")
-    });
 
-    function init() {
-        instanceUE('orderName');
-        instanceUE('orderDescription');
-        instanceUE('typeDescription');
-        instanceUE('typeName');
-
-        $.get("/xiaobing/getAllOrderType/").done(function (data) {
-            var json = JSON.parse(data);
-            var arr = [];
-            $.each(json, function (index, order) {
-                var option = '<option value="' + order.fields.typeId + '">' + order.fields.typeName + '</option>';
-                arr.push(option)
-            });
-            $("#typeId").empty().append(arr.join())
-
-        });
-
-        initTable();
-
-        $("#quanxuan").on('click', function () {
-            if ($("#datatable input[type=checkbox]").prop("checked")) {
-                console.log(1)
-                $("#datatable input[type=checkbox]").removeAttr("checked")
-            } else {
-                console.log(2)
-                $("#datatable input[type=checkbox]").attr("checked", "checked")
-            }
-        })
-    }
-
-    function instanceUE(id) {
-        UE.getEditor(id, {
-            'toolbars': [['source', '|', 'undo', 'redo', '|', 'bold', 'italic', 'underline', 'formatmatch', 'autotypeset', '|', 'forecolor', 'backcolor', '|', 'link', 'unlink', '|', 'simpleupload', 'insertvideo', 'music', 'attachment', 'map']],
-            'a': 2,
-            'serverUrl': '/ueditor/controller/?imagePathFormat=image%2Forder&filePathFormat=bb%2F'
-        }).ready(function () {
-
-        });
-    }
-
-    function deleteRow(dom) {
-        var order = JSON.parse(unescape($(dom).attr("order")));
-        console.log(order)
-    }
-
-    function updateRow(dom) {
-        var order = JSON.parse(unescape($(dom).attr("order")));
-        console.log(order);
-    }
-
-    function initTable() {
-        $("#datatable").DataTable({
-            "serverSide": true,
-            "ajax": {
-                url: "/xiaobing/search/",
-                type: 'GET',
-                //用于处理服务器端返回的数据。 dataSrc是DataTable特有的
-                dataSrc: function (myJson) {
-                    console.log(myJson)
-                    console.log(JSON.parse(myJson.data))
-                    return JSON.parse(myJson.data);
-                },
-                data: function (param) {
-                    param.search = $("#search").val();
-                    return param;
+        //issue表格初始化
+        githubTable = $("#issueTable").DataTable({
+            //调用github api 获取issues 数据
+            ajax: {
+                url: "https://api.github.com/repos/ssy341/datatables-cn/issues",
+                dataSrc: ''
+            },
+            order: [[4, "desc"]],
+            //行被创建回调
+            createdRow: function (row, data, dataIndex) {
+                console.log(row)
+                var updated_at = new Date(Date.parse(data.updated_at)).Format("yyyy-MM-dd hh:mm:ss");
+                updated_at = new Date(updated_at).getTime();
+                var current = new Date().getTime();
+                var bl = current - updated_at;
+                var s = 5 * 24 * 60 * 60 * 1000;
+                //最后更新日期在最近5天则突出显示
+                if (bl < s) {
+                    $(row).addClass('unread');
                 }
             },
-            "columns": [
-                {
-                    "data": "typeId",
-                    className: "center",
-                    "width": 40,
-                    "orderable": true,
-                    "visible": true,
-                    "searchable": false,
-                    "title": "指令类别",
-                    "defaultContent": "<i>Not set</i>",
-                    "cellType": "td"
-                },
-                {"data": "orderId", "width": 40, "title": "指令代码"},
-                {"data": "orderName", "width": 40, "title": "指令名称"},
-                {"data": "orderDescription", "width": 40, "title": "指令说明"},
-                {"data": "typeDescription", "width": 40, "title": "类别说明"},
-                {"data": "typeDescription", "width": 40, "title": "序号"},
-                {"width": 40, "title": "操作"},
-            ],
+            //行创建完成后回调
+            rowCallback: function (row, data, index) {
+                var tags = $(row).find("td:eq(1)");
+                if (tags.text().indexOf("置顶") > 0) {
+                    var title = $(row).find("td:eq(0)");
+                    var hot = "";
+                    title.html(title.html() + hot);
+                }
+            },
             columnDefs: [
                 {
-                    targets: [0],
+                    targets: 4,
+                    data: "updated_at",
+                    title: "",
                     render: function (data, type, row, meta) {
-                        console.log("-===")
-                        console.log(data)
-                        console.log(row)
-                        return row.fields.typeId;
-                    },
+                        return new Date(Date.parse(data)).Format("yyyy-MM-dd hh:mm:ss");
+                    }
                 },
                 {
-                    targets: [1],
+                    targets: 3,
+                    data: null,
+                    title: "",
                     render: function (data, type, row, meta) {
-                        return row.fields.orderId;
-                    },
+                        return "" + row.user.login + "";
+                    }
                 },
                 {
-                    targets: [2],
+                    targets: 2,
+                    data: "comments",
+                    title: "",
                     render: function (data, type, row, meta) {
-                        return row.fields.orderName;
-                    },
+                        var comments = data + "";
+                        return comments;
+                    }
                 },
                 {
-                    targets: [3],
+                    targets: 1,
+                    data: null,
+                    title: "",
                     render: function (data, type, row, meta) {
-                        return row.fields.orderDescription;
-                    },
-                }, {
-                    targets: [4],
+                        var labels = "";
+                        if (row.labels.length) {
+                            for (var j = 0, labelslen = row.labels.length; j < labelslen; j++) {
+                                labels += "" +
+                                    row.labels[j].name + "";
+                                if (j != labelslen - 1) {
+                                    labels += ",";
+                                }
+                            }
+                        }
+                        return labels;
+                    }
+                },
+                {
+                    targets: 0,
+                    data: "title",
+                    title: "",
                     render: function (data, type, row, meta) {
-                        return row.fields.typeDescription;
-                    },
-                }, {
-                    targets: [5],
-                    render: function (data, type, row, meta) {
-                        return row.fields.number;
-                    },
-                }, {
-                    targets: [6],
-                    render: function (data, type, row, meta) {
-                        var str = escape(JSON.stringify(row))
-                        var arr = [];
-                        arr.push('<button type="button" order=' + str + ' class="btn btn-primary" onclick="updateRow(this)">修改</button>')
-                        arr.push('<button type="button" order=' + str + ' class="btn btn-danger" onclick="deleteRow(this)">删除</button>')
-                        return arr.join(" ");
-                    },
-                }],
-            // 是否允许检索
-            "searching": true,
-            // 是否允许排序
-            "ordering": true,
-            //默认最后一列（最后更新时间）降序排列
-            order: [[5, "ASC"]],
-            // 是否允许翻页，设成false，翻页按钮不显示
-            "paging": true,
-            "scrollX": false,
-            "scrollY": false,
-            "autoWidth": true,
-            "processing": false,
-            "destroy": true,
-            "dom": '<"row"<"#id.col-xs-6"r><"col-xs-6">>' + "t" + '<"row"<"col-xs-6"i><"col-xs-6"p>>',
-            "renderer": "bootstrap",
-            {#"language": {#}
-            {#    "processing": '<div class="panel-overlay-content unselectable"><span class="panel-overlay-icon text-dark"><i class="fa fa-spinner fa-2x fa-spin"></i></span><h4 class="panel-overlay-title">数据加载中...</h4></div>',#}
-            {#    "lengthMenu": "显示 _MENU_ 项结果",#}
-            {#    "zeroRecords": "没有匹配结果",#}
-            {#    "info": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",#}
-            {#    "infoEmpty": "显示第 0 至 0 项结果，共 0 项",#}
-            {#    "infoFiltered": "",#}
-            {#    "infoPostFix": "",#}
-            {#    "search": "搜索:",#}
-            {#    "searchPlaceholder": "搜索...",#}
-            {#    "url": "",#}
-            {#    "emptyTable": "暂无数据",#}
-            {#    "loadingRecords": "载入中...",#}
-            {#    "infoThousands": ",",#}
-            {#    "paginate": {#}
-            {#        "first": "首页",#}
-            {#        "previous": "上页",#}
-            {#        "next": "下页",#}
-            {#        "last": "末页"#}
-            {#    },#}
-            {#    "aria": {#}
-            {#        paginate: {#}
-            {#            first: '首页',#}
-            {#            previous: '上页',#}
-            {#            next: '下页',#}
-            {#            last: '末页'#}
-            {#        },#}
-            {#        "sortAscending": ": 以升序排列此列",#}
-            {#        "sortDescending": ": 以降序排列此列"#}
-            {#    },#}
-            {#    "decimal": "-",#}
-            {#    "thousands": ","#}
-            {##}
-            {#\},#}
-            // 每一行创建完调用的函数
-            "createdRow": function (row, data, dataIndex) {
-
-            },
-            //thead被描画后调用
-            "headerCallback": function (thead, data, start, end, display) {
-
-            },
-            // tfoot被描画后调用，通常可用于计算合计值
-            "footerCallback": function (tfoot, data, start, end, display) {
-
-            },
-            // 初始化，描画都已经完成，常用于ajax
-            "initComplete": function (settings, json) {
-//表格加载完毕，手动添加按钮到表格上
+                        var title = "" + row.title + "";
+                        return title;
+                    }
+                }
+            ],
+            initComplete: function (settings, json) {
+                //表格加载完毕，手动添加按钮到表格上
                 $("#toolbar").css("width", "100px").css("display", "inline").css("margin-left", "10px");
                 $("#toolbar").append("我有问题");
                 $("#toolbar").append("DIY");
                 $("#toolbar").append("查看已解决问题");
                 $("#toolbar").append("查看本实例代码");
-            },
-            "formatNumber": function (toFormat) {
 
+                //加载已经关闭的问题
+                $(".closedIssue").clickToggle(function () {
+                    //调用url方法切换dt的数据源
+                    githubTable.ajax.url("https://api.github.com/repos/ssy341/datatables-cn/issues?state=closed").load();
+                    $(this).text("查看未解决问题").css("color", "#FF0000");
+                }, function () {
+                    githubTable.ajax.url("https://api.github.com/repos/ssy341/datatables-cn/issues").load();
+                    $(this).text("查看已解决问题").css("color", "#009900");
+                });
+
+                //查看本例子代码
+                $(".viewCode").click(function () {
+                    //显示模态框展示代码
+                    $("#issueTableCode").modal("show");
+                    $("#issueTableCodeContent").html($("#issueTableScript").html());
+                });
             }
         });
-    }
+    });
 
-       //时间格式化
+    //时间格式化
     Date.prototype.Format = function (fmt) { //author: meizz
         var o = {
             "M+": this.getMonth() + 1,
@@ -437,85 +216,22 @@
         return fmt;
     };
 
-    function saveOrder() {
-        document.cookie = "csrfmiddlewaretoken=" + $("input[name=csrfmiddlewaretoken]").val();
-        var typeId = document.getElementById("typeId").value;
-        var isShow = $("#isShow").prop("checked");
-        var isShowOrder = $("#isShowOrder").prop("checked");
-        var orderName = getContent('orderName');
-        var orderNameText = getContentText('orderName');
-        var number = document.getElementById("number").value;
-        var orderDescription = getContent('orderDescription');
-        var typeDescription = getContent('typeDescription');
-
-        var order = {
-            typeId: typeId,
-            isShow: isShow,
-            isShowOrder: isShowOrder,
-            orderName: orderName,
-            orderNameText: orderNameText,
-            number: number,
-            orderDescription: orderDescription,
-            typeDescription: typeDescription
-        };
-
-
-        $.ajax({
-            type: "POST",
-            url: "/xiaobing/saveOrder/",
-            // 允许携带证书
-            xhrFields: {
-                withCredentials: true
-            },
-            // 允许跨域
-            crossDomain: true,
-            data: order
-        }).done(function (data) {
-            window.location.reload();
-        });
-    }
-
-    function saveOrderType() {
-        document.cookie = "csrfmiddlewaretoken=" + $("input[name=csrfmiddlewaretoken]").val();
-        var typeName = getContent("typeName");
-        var typeNameText = getContentText("typeName");
-        var number = document.getElementById("typeNumber").value;
-
-        var orderType = {
-            typeName: typeName,
-            typeNameText: typeNameText,
-            number: number
-        };
-
-        $.ajax({
-            type: "POST",
-            url: "/xiaobing/saveType/",
-            // 允许携带证书
-            xhrFields: {
-                withCredentials: true
-            },
-            // 允许跨域
-            crossDomain: true,
-            data: orderType
-        }).done(function (data) {
-            var json = JSON.parse(data);
-            var arr = [];
-            $.each(json, function (index, order) {
-                var option = '<option value="' + order.fields.typeId + '">' + order.fields.typeName + '</option>';
-                arr.push(option)
+    //事件来回切换方法
+    //solve this
+    //reference http://stackoverflow.com/questions/4911577/jquery-click-toggle-between-two-functions
+    (function ($) {
+        $.fn.clickToggle = function (func1, func2) {
+            var funcs = [func1, func2];
+            this.data('toggleclicked', 0);
+            this.click(function () {
+                var data = $(this).data();
+                var tc = data.toggleclicked;
+                $.proxy(funcs[tc], this)();
+                data.toggleclicked = (tc + 1) % 2;
             });
-            $("#typeId").empty().append(arr.join())
-            $("#myModal").modal('hide')
-        }, 'json');
-    }
-
-    function getContent(id) {
-        return UE.getEditor(id).getContent();
-    }
-
-    function getContentText(id) {
-        return UE.getEditor(id).getContentTxt();
-    }
+            return this;
+        };
+    }(jQuery));
 
 
 </script>
