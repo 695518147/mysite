@@ -16,14 +16,10 @@
     <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
     <script type="text/javascript" charset="utf-8" src="/static/ueditor/lang/zh-cn/zh-cn.js"></script>
 
-    <script type="text/javascript" charset="utf-8"
-            src="/static/DataTables-1.10.15/media/js/jquery.dataTables.js"></script>
-    <link type="text/css" href="/static/DataTables-1.10.15/media/css/jquery.dataTables.css">
+    <link type="text/css" rel="stylesheet" href="/static/DataTables-1.10.15/media/css/jquery.dataTables.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/static/DataTables-1.10.15/media/css/bootstrap-responsive.min.css"/>
     <style type="text/css">
-        div {
-            width: 100%;
-        }
-
+        {# 此class特别重要对于富文本的显示 #}
         .modal-backdrop {
             position: fixed;
             top: 0;
@@ -38,17 +34,38 @@
             margin: 10px 0 0;
         }
 
-        {#    datatable  #}
-        .table {
-            width: 100%;
-            max-width: 100%;
-            margin-bottom: -9px;
+        #datatable_filter {
+            width: 70%;
         }
 
-        .adapt {
-            width: 55%;
-            height: 35%;
+        #datatable_filter label {
+            width: 90%;
         }
+
+        #toolbar {
+            width: 30%;
+            display: inline-block;
+            padding-left: 25%;
+        }
+
+        .form-control1 {
+            width: 75%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+
     </style>
 
 </head>
@@ -56,20 +73,8 @@
 <div class="panel panel-primary">
     <div class="panel-heading">指令列表</div>
     <div class="panel-body">
-        <div class="row">
-            <div class="col-sm-10 col-xs-10">
-                <input type="text" class="form-control" id="search" placeholder="请输入指令类别代码、指令代码或者指令名称">
-            </div>
-            <div class="col-sm-1 col-xs-1 align-right">
-                <button type="button" class="btn btn-default" onclick="initTable();">搜&nbsp;&nbsp;&nbsp;&nbsp;索</button>
-            </div>
-            <div class="col-sm-1 col-xs-1">
-                <button type="button" class="btn btn-primary" onclick="modalHandler('orderModal','add')">
-                    新增指令
-                </button>
-            </div>
-        </div>
-        <table id="datatable" class="table display table-border" style="overflow:hidden">
+
+        <table id="datatable" class="display" style="overflow:hidden">
         </table>
     </div>
 </div>
@@ -80,6 +85,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">
                     新增指令
                 </h4>
@@ -92,8 +98,8 @@
                         <div class="col-sm-10">
                             <select class="form-control" id="typeId">
                             </select><!-- 按钮触发模态框 -->
-                            <button class="btn btn-primary" data-toggle="modal" onclick="modalHandler('myModal')">
-                                新增类别
+                            <button class="btn btn-primary" data-toggle="modal" onclick="order.modalHandler('myModal')">
+                                新增指令类别
                             </button>
                         </div>
                     </div>
@@ -138,7 +144,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭
                 </button>
-                <button type="button" id="saveOrderType" onclick="saveOrder()" class="btn btn-primary">
+                <button type="button" onclick="order.saveOrder()" class="btn btn-primary">
                     保存
                 </button>
             </div>
@@ -152,6 +158,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">
                     新增指令类别
                 </h4>
@@ -175,7 +182,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭
                 </button>
-                <button type="button" id="saveOrderType" onclick="saveOrderType()" class="btn btn-primary">
+                <button type="button" id="saveOrderType" onclick="order.saveOrderType()" class="btn btn-primary">
                     <input id="operate" type="hidden" value="add">
                     <input id="id" type="hidden">
                     保存
@@ -185,330 +192,8 @@
     </div><!-- /.modal -->
 </div>
 
-<script type="text/javascript">
-    /**
-     * 模态框显示回调
-     * @param domId
-     */
-    function modalHandler(domId, echoData, operate) {
-        $("#" + domId).modal({backdrop: 'static', keyboard: false});
-        if (arguments.length > 1 && typeof echoData === "function") {
-            echoData()
-        }
 
-        if(arguments.length > 1 && typeof echoData === "string"){
-            operate = echoData
-            $("#operate").val(operate)
-            $("#id").val("")
-        }
-
-        if(arguments.length > 2 && typeof operate === "string"){
-            $("#operate").val(operate)
-        }
-    }
-
-    $(function () {
-        init();
-
-        //配置DataTables默认参数
-        $.extend(true, $.fn.dataTable.defaults, {
-            "language": {
-                "url": "http://www.datatables.club/assets/Chinese.txt"
-            },
-            "dom": "l<'#toolbar'>frtip"
-        });
-    });
-
-    function init() {
-        instanceUE('orderName');
-        instanceUE('orderDescription');
-        instanceUE('typeDescription');
-        instanceUE('typeName');
-
-        $.get("/xiaobing/getAllOrderType/").done(function (data) {
-            var json = JSON.parse(data);
-            var arr = [];
-            $.each(json, function (index, order) {
-                var option = '<option value="' + order.fields.typeId + '">' + order.fields.typeName + '</option>';
-                arr.push(option)
-            });
-            $("#typeId").empty().append(arr.join())
-
-        });
-
-        initTable();
-
-    }
-
-    function instanceUE(id) {
-        UE.getEditor(id, {
-            'toolbars': [['source', '|', 'undo', 'redo', '|', 'bold', 'italic', 'underline', 'formatmatch', 'autotypeset', '|', 'forecolor', 'backcolor', '|', 'link', 'unlink', '|', 'simpleupload', 'insertvideo', 'music', 'attachment', 'map']],
-            'a': 2,
-            'serverUrl': '/ueditor/controller/?imagePathFormat=image%2Forder&filePathFormat=bb%2F'
-        }).ready(function () {
-
-        });
-    }
-
-    function deleteRow(dom) {
-        var order = JSON.parse(unescape($(dom).attr("order")));
-        $.ajax({
-            type: "GET",
-            url: "/xiaobing/deleteOrder/",
-            // 允许携带证书
-            xhrFields: {
-                withCredentials: true
-            },
-            // 允许跨域
-            crossDomain: true,
-            data: {id:order.id}
-        }).done(function (data) {
-            window.location.reload();
-        });
-    }
-
-    function updateRow(dom) {
-        var order = JSON.parse(unescape($(dom).attr("order")));
-        modalHandler("orderModal", function () {
-            $("#typeId").val(order.typeId);
-            $("#orderId").val(order.orderId);
-            if(order.isShowOrder == "true"){
-                $("#isShowOrder").attr("checked","checked");
-            }else{
-                $("#isShowOrder").removeAttr("checked");
-            }
-            if(order.isShow == "true"){
-                $("#isShow").attr("checked","checked");
-            }else{
-                $("#isShow").removeAttr("checked");
-            }
-            $("#number").val(order.number);
-            $("#id").val(order.id);
-            UE.getEditor('orderName').setContent(order.orderName)
-            UE.getEditor('orderDescription').setContent(order.orderDescription)
-            UE.getEditor('typeDescription').setContent(order.typeDescription)
-
-        },'edit');
-    }
-
-    function initTable() {
-        var mytable = $("#datatable").DataTable({
-            sSource: "/xiaobing/search/",
-            serverSide: true,
-            bInfo: true,
-            //服务器端，数据回调处理
-            fnServerData: function (sSource, aDataSet, fnCallback) {
-                var obj = {};
-                aDataSet.forEach(function (item) {
-                    if (["start", "length"].join("-").search(item.name) != -1) {
-                        obj[item.name] = item.value;
-                    } else if (item.name == "order") {
-                        if (item.value.length > 0) {
-                            obj[item.name] = item.value[0]["dir"]
-                        }
-
-                    }
-                })
-                obj["search"] = $("#search").val();
-                $.ajax({
-                    "dataType": 'json',
-                    "type": "post",
-                    "url": "/xiaobing/search/",
-                    "data": obj,
-                    "success": function (resp) {
-                        fnCallback(resp);
-                    }
-                });
-            },
-            "aLengthMenu": [[5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, "All"]], // 定义每页显示数据数量
-            aoColumns: [
-                {mData: "orderName", "width": 40, "title": "指令名称"},
-                {
-                    mData: "typeId",
-                    "width": 40,
-                    "orderable": true,
-                    "visible": true,
-                    "searchable": false,
-                    "title": "指令类别",
-                    "defaultContent": "<i>Not set</i>",
-                    "cellType": "td"
-                },
-                {mData: "orderId", "width": 40, "title": "指令代码"},
-
-                {mData: "orderDescription", "width": 40, "title": "指令说明"},
-                {mData: "typeDescription", "width": 40, "title": "类别说明"},
-                {mData: "isShowOrder", "width": 40, "title": "是否显示"},
-                {mData: "createTime", "width": 40, "title": "创建时间"},
-                {mData: "", "width": 40, "title": "操作"},
-            ],
-            columnDefs: [
-                {
-                    targets: [5],
-                    render: function (data, type, row, meta) {
-                        return data == "true" ? "是" : "否";
-                    },
-                },
-                {
-                    targets: [0, 1, 2, 3, 4, 5, 7],
-                    orderable: false,
-                    ordering: false
-                },
-                {
-                    targets: [7],
-                    render: function (data, type, row, meta) {
-                        var str = escape(JSON.stringify(row))
-                        var arr = [];
-                        arr.push('<button type="button" order=' + str + ' class="btn btn-primary" onclick="updateRow(this)">修改</button>')
-                        arr.push('<button type="button" order=' + str + ' class="btn btn-danger" onclick="deleteRow(this)">删除</button>')
-                        return arr.join(" ");
-                    },
-                }
-            ],
-            // 是否允许检索
-            searching: false,
-            // 是否允许排序
-            ordering: true,
-            //默认最后一列（最后更新时间）降序排列
-            order: [[5, "ASC"]],
-            // 是否允许翻页，设成false，翻页按钮不显示
-            paging: true,
-            scrollX: false,
-            scrollY: false,
-            autoWidth: true,
-            processing: false,
-            destroy: true,
-            dom: '<"row"<"#id.col-xs-6"r><"col-xs-6">>' + "tl" + '<"row"<"col-xs-6"i><"col-xs-6"p>>',
-            language: {
-                url: "/Chinese.json"
-            },
-
-            initComplete: function (settings, json) {
-
-            },
-            rowCallback: function (row, data, displayNum, displayIndex, dataIndex) {
-                $(row).find("video,img").addClass("adapt");
-            },
-            formatNumber: function (toFormat) {
-                return toFormat;
-            }
-        });
-
-    }
-
-    //时间格式化
-    Date.prototype.Format = function (fmt) { //author: meizz
-        var o = {
-            "M+": this.getMonth() + 1,
-            //月份
-            "d+": this.getDate(),
-            //日
-            "h+": this.getHours(),
-            //小时
-            "m+": this.getMinutes(),
-            //分
-            "s+": this.getSeconds(),
-            //秒
-            "q+": Math.floor((this.getMonth() + 3) / 3),
-            //季度
-            "S": this.getMilliseconds() //毫秒
-        };
-        if (/(y+)/.test(fmt)) {
-            fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
-        }
-        for (var k in o) {
-            if (new RegExp("(" + k + ")").test(fmt)) {
-                fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
-            }
-        }
-        return fmt;
-    };
-
-    function saveOrder() {
-        document.cookie = "csrfmiddlewaretoken=" + $("input[name=csrfmiddlewaretoken]").val();
-        var typeId = document.getElementById("typeId").value;
-        var isShow = $("#isShow").prop("checked");
-        var isShowOrder = $("#isShowOrder").prop("checked");
-        var operate = $("#operate").val();
-        var pk = $("#id").val();
-        var orderName = getContent('orderName');
-        var orderNameText = getContentText('orderName');
-        var number = document.getElementById("number").value;
-        var orderDescription = getContent('orderDescription');
-        var typeDescription = getContent('typeDescription');
-
-        var order = {
-            pk: pk,
-            typeId: typeId,
-            isShow: isShow,
-            operate: operate,
-            isShowOrder: isShowOrder,
-            orderName: orderName,
-            orderNameText: orderNameText,
-            number: number,
-            orderDescription: orderDescription,
-            typeDescription: typeDescription
-        };
-
-
-        $.ajax({
-            type: "POST",
-            url: "/xiaobing/saveOrder/",
-            // 允许携带证书
-            xhrFields: {
-                withCredentials: true
-            },
-            // 允许跨域
-            crossDomain: true,
-            data: order
-        }).done(function (data) {
-            window.location.reload();
-        });
-    }
-
-    function saveOrderType() {
-        document.cookie = "csrfmiddlewaretoken=" + $("input[name=csrfmiddlewaretoken]").val();
-        var typeName = getContent("typeName");
-        var typeNameText = getContentText("typeName");
-        var number = document.getElementById("typeNumber").value;
-
-        var orderType = {
-            typeName: typeName,
-            typeNameText: typeNameText,
-            number: number
-        };
-
-        $.ajax({
-            type: "POST",
-            url: "/xiaobing/saveType/",
-            // 允许携带证书
-            xhrFields: {
-                withCredentials: true
-            },
-            // 允许跨域
-            crossDomain: true,
-            data: orderType
-        }).done(function (data) {
-            var json = JSON.parse(data);
-            var arr = [];
-            $.each(json, function (index, order) {
-                var option = '<option value="' + order.fields.typeId + '">' + order.fields.typeName + '</option>';
-                arr.push(option)
-            });
-            $("#typeId").empty().append(arr.join())
-            $("#myModal").modal('hide')
-        }, 'json');
-    }
-
-    function getContent(id) {
-        return UE.getEditor(id).getContent();
-    }
-
-    function getContentText(id) {
-        return UE.getEditor(id).getContentTxt();
-    }
-
-
-</script>
-
+<script type="text/javascript" src="http://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/static/js/order.js"></script>
 </body>
 </html>

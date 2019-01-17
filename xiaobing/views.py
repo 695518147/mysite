@@ -30,10 +30,12 @@ def deleteOrder(request):
 
 def search(request):
     if request.method == 'POST':
-        page_length = int(request.POST.get('length', '5'))
-        keyword = request.POST.get("search")
-        sorts = request.POST.get("order")
-        if sorts == "asc":
+        data = json.loads(request.POST.get("data"))
+        param = {v: obj['value'] for obj in data for k, v in obj.items() if k == "name"}
+        page_length = int(param['length'])
+        keyword = param['search']['value']
+        sorts = param['order'][0]['dir']
+        if (sorts == "ASC") | (sorts == "asc"):
             order_by = "createTime"
         else:
             order_by = "-createTime"
@@ -44,22 +46,26 @@ def search(request):
             q = q | Q(orderName__icontains=kw)
         total_length = Order.objects.filter(q).count()
 
-        page_start = int(request.POST.get('start', '0'))
+        page_start = int(param['start'])
         page_end = page_start + page_length
-        page_data = Order.objects.filter(q).order_by(order_by)[
-                    page_start:page_end]
+        if page_length == -1:
+            page_data = Order.objects.filter(q).order_by(order_by)
+        else:
+            page_data = Order.objects.filter(q).order_by(order_by)[
+                        page_start: page_end]
         rest = {
             "iTotalRecords": page_length,  # 本次加载记录数量
             "iTotalDisplayRecords": total_length,  # 总记录数量
             "aaData": []}
-        data = []
-        for item in page_data:
-            res = {'id': item.pk, 'typeId': item.typeId, 'orderId': item.orderId, 'orderName': item.orderName,
-                   'orderDescription': item.orderDescription, 'isShowOrder': item.isShowOrder, 'isShow': item.isShow,
-                   'typeDescription': item.typeDescription, 'number': item.number, 'createTime': item.createTime}
-            data.append(res)
-        rest['aaData'] = data
-        return HttpResponse(json.dumps(rest, cls=DateEncoder, ensure_ascii=True), content_type='application/json')
+    data = []
+    for item in page_data:
+        res = {'id': item.pk, 'typeId': item.typeId, 'orderId': item.orderId, 'orderName': item.orderName,
+               'orderDescription': item.orderDescription, 'isShowOrder': item.isShowOrder, 'isShow': item.isShow,
+               'typeDescription': item.typeDescription, 'number': item.number, 'createTime': item.createTime}
+        data.append(res)
+    rest['aaData'] = data
+
+    return HttpResponse(json.dumps(rest, cls=DateEncoder, ensure_ascii=True), content_type='application/json')
 
 
 def edit(request):
