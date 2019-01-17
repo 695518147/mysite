@@ -23,17 +23,22 @@ def test(request):
 
 def deleteOrder(request):
     pk = request.GET.get("id")
-    order = Order.objects.get(pk=pk)
-    order.delete()
-    return HttpResponse("")
+    order = Order.objects.filter(pk=pk)
+    if order.exists():
+        order.delete()
+        return HttpResponse("1")
+    else:
+        return HttpResponse("0")
 
 
 def search(request):
+    isShow = ['是', '否']
     if request.method == 'POST':
         data = json.loads(request.POST.get("data"))
         param = {v: obj['value'] for obj in data for k, v in obj.items() if k == "name"}
         page_length = int(param['length'])
-        keyword = param['search']['value']
+        keyword = param['search']['value'].strip()
+
         sorts = param['order'][0]['dir']
         if (sorts == "ASC") | (sorts == "asc"):
             order_by = "createTime"
@@ -41,9 +46,13 @@ def search(request):
             order_by = "-createTime"
         # 分词
         arr = " ".join(jieba.cut(keyword)).split(" ")
-        q = Q(orderId__icontains=keyword)
+        q = Q(orderId__icontains=keyword) | Q(typeId__icontains=keyword)
         for kw in arr:
             q = q | Q(orderName__icontains=kw)
+
+        if keyword in isShow:
+            q = Q(isShow__icontains=keyword)
+
         total_length = Order.objects.filter(q).count()
 
         page_start = int(param['start'])

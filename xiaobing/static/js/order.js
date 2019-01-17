@@ -11,11 +11,13 @@ $(function () {
 });
 
 var order = (function () {
+    var mytable;
+
     /**
      * 初始化表格
      */
     function initTable() {
-        var mytable = $("#datatable").DataTable({
+        mytable = $("#datatable").DataTable({
             sSource: "/xiaobing/search/",
             serverSide: true,
             bInfo: true,
@@ -34,18 +36,14 @@ var order = (function () {
             "aLengthMenu": [[5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, "All"]], // 定义每页显示数据数量
             aoColumns: [
                 {mData: "orderName", "width": 40, "title": "指令名称"},
+                {mData: "orderId", "width": 40, "title": "指令代码"},
                 {
                     mData: "typeId",
                     "width": 40,
-                    "orderable": true,
                     "visible": true,
-                    "searchable": false,
                     "title": "指令类别",
-                    "defaultContent": "<i>Not set</i>",
-                    "cellType": "td"
+                    "defaultContent": "<i>Not set</i>"
                 },
-                {mData: "orderId", "width": 40, "title": "指令代码"},
-
                 {mData: "orderDescription", "width": 40, "title": "指令说明"},
                 {mData: "typeDescription", "width": 40, "title": "类别说明"},
                 {mData: "isShowOrder", "width": 40, "title": "是否显示"},
@@ -88,9 +86,7 @@ var order = (function () {
             processing: false,
 
             initComplete: function (settings, json) {
-                console.log(settings)
                 $("input[type=search]").addClass("form-control1");
-                //表格加载完毕，手动添加按钮到表格上
                 $("#toolbar").append("<a href='JavaScript:void(0)' " +
                     "class='btn btn-primary btn-sm'  onclick=\"order.modalHandler('orderModal','add')\">新建指令</a>");
             },
@@ -155,19 +151,34 @@ var order = (function () {
     }
 
     function deleteRow(dom) {
-        var order = JSON.parse(unescape($(dom).attr("order")));
-        $.ajax({
-            type: "GET",
-            url: "/xiaobing/deleteOrder/",
-            // 允许携带证书
-            xhrFields: {
-                withCredentials: true
-            },
-            // 允许跨域
-            crossDomain: true,
-            data: {id: order.id}
-        }).done(function (data) {
-            window.location.reload();
+
+        var index = layer.confirm('确认删除吗？', {
+            btn: ['确认', '取消'] //按钮
+        }, function () {
+            var order = JSON.parse(unescape($(dom).attr("order")));
+            $.ajax({
+                type: "GET",
+                url: "/xiaobing/deleteOrder/",
+                // 允许携带证书
+                xhrFields: {
+                    withCredentials: true
+                },
+                // 允许跨域
+                crossDomain: true,
+                data: {id: order.id}
+            }).done(function () {
+                mytable.draw()
+
+            }).done(function () {
+                layer.close(index);
+                layer.msg('删除成功！', {
+                    time: 2000 //20s后自动关闭
+                });
+            }).fail(function (err) {
+
+            });
+        }, function () {
+
         });
     }
 
@@ -234,7 +245,19 @@ var order = (function () {
             crossDomain: true,
             data: order
         }).done(function (data) {
-            window.location.reload();
+            mytable.draw();
+            $("#orderModal").modal('hide');
+        }).done(function () {
+            if (operate == 'add') {
+                layer.msg('添加成功！', {
+                    time: 2000 //20s后自动关闭
+                });
+            } else {
+                layer.msg('修改成功！', {
+                    time: 2000 //20s后自动关闭
+                });
+            }
+
         });
     }
 
@@ -267,9 +290,14 @@ var order = (function () {
                 var option = '<option value="' + order.fields.typeId + '">' + order.fields.typeName + '</option>';
                 arr.push(option)
             });
-            $("#typeId").empty().append(arr.join())
-            $("#myModal").modal('hide')
-        }, 'json');
+            $("#typeId").empty().append(arr.join());
+            $("#myModal").modal('hide');
+
+        }, 'json').done(function () {
+            layer.msg('添加成功！', {
+                time: 2000 //20s后自动关闭
+            });
+        });
     }
 
     function getContent(id) {
