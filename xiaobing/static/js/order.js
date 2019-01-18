@@ -98,21 +98,30 @@ var order = (function () {
     }
 
     /**
-     * 模态框显示回调
+     * 模态框数据回显
      * @param domId
+     * @param callback   用于修改时数据回显
+     * @param operate
      */
     function modalHandler(domId, callback, operate) {
         $("#" + domId).modal({backdrop: 'static', keyboard: false});
+
+        //edit
         if (arguments.length > 1 && typeof callback === "function") {
             callback()
         }
 
+        //add
         if (arguments.length > 1 && typeof callback === "string") {
             operate = callback
             $("#operate").val(operate)
-            $("#id").val("")
+            $("#id").val("");
+            UE.getEditor("orderDescription").setContent( "" )
+            UE.getEditor("orderName").setContent( "" )
+            UE.getEditor("typeDescription").setContent( "" )
         }
 
+        //edit
         if (arguments.length > 2 && typeof operate === "string") {
             $("#operate").val(operate)
         }
@@ -141,12 +150,10 @@ var order = (function () {
     }
 
     function instanceUE(id) {
-        UE.getEditor(id, {
+        var ue = UE.getEditor(id, {
             'toolbars': [['source', '|', 'undo', 'redo', '|', 'bold', 'italic', 'underline', 'formatmatch', 'autotypeset', '|', 'forecolor', 'backcolor', '|', 'link', 'unlink', '|', 'simpleupload', 'insertvideo', 'music', 'attachment', 'map']],
             'a': 2,
             'serverUrl': '/ueditor/controller/?imagePathFormat=image%2Forder&filePathFormat=bb%2F'
-        }).ready(function () {
-
         });
     }
 
@@ -199,9 +206,9 @@ var order = (function () {
             }
             $("#number").val(order.number);
             $("#id").val(order.id);
-            UE.getEditor('orderName').setContent(order.orderName)
-            UE.getEditor('orderDescription').setContent(order.orderDescription)
-            UE.getEditor('typeDescription').setContent(order.typeDescription)
+            UE.getEditor('orderName').setContent(order.orderName);
+            UE.getEditor('orderDescription').setContent(order.orderDescription);
+            UE.getEditor('typeDescription').setContent(order.typeDescription);
 
         }, 'edit');
     }

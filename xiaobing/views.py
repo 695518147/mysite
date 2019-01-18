@@ -9,6 +9,7 @@ from django.db.models import Q
 from xiaobing.json import DateEncoder
 import json
 import jieba
+import re
 
 
 # Create your views here.pip
@@ -37,7 +38,9 @@ def search(request):
         data = json.loads(request.POST.get("data"))
         param = {v: obj['value'] for obj in data for k, v in obj.items() if k == "name"}
         page_length = int(param['length'])
-        keyword = param['search']['value'].strip()
+        pattern = "[<|/|>|=|;|:|]"
+        keyword = re.sub(pattern, '?',
+                         param['search']['value'].replace(' ', '').replace('<p>', '?').replace('</p>', '?'))
 
         sorts = param['order'][0]['dir']
         if (sorts == "ASC") | (sorts == "asc"):

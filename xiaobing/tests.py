@@ -1,31 +1,5 @@
-arr = [
-    {"name": "draw", "value": 1},
-    {"name": "columns", "value": [
-        {"data": "orderName", "name": "", "searchable": True, "orderable": False,
-         "search": {"value": "", "regex": False}
-         },
-        {"data": "typeId", "name": "", "searchable": False, "orderable": True, "search": {"value": "", "regex": False}},
-        {"data": "orderId", "name": "", "searchable": True, "orderable": False,
-         "search": {"value": "", "regex": False}},
-        {"data": "orderDescription", "name": "", "searchable": True, "orderable": False,
-         "search": {"value": "", "regex": False}},
-        {"data": "typeDescription", "name": "", "searchable": True, "orderable": False,
-         "search": {"value": "", "regex": False}},
-        {"data": "isShowOrder", "name": "", "searchable": True, "orderable": False,
-         "search": {"value": "", "regex": False}},
-        {"data": "createTime", "name": "", "searchable": True, "orderable": True,
-         "search": {"value": "", "regex": False}
-         },
-        {"data": "", "name": "", "searchable": True, "orderable": False, "search": {"value": "", "regex": False}}
-    ]
-     },
-    {"name": "order", "value": [{"column": 5, "dir": "ASC"}]
-     },
-    {"name": "start", "value": 0},
-    {"name": "length", "value": 5},
-    {"name": "search", "value": {"value": "", "regex": False}}
-]
-
-o = {v: obj['value'] for obj in arr for k, v in obj.items() if k == "name"}
-
-print(o)
+import re
+url = 'https://113.215.20.136:9011/113.215.6.77/c3pr90ntcya0/youku/6981496DC9913B8321BFE4A4E73/0300010E0C51F10D86F80703BAF2B1ADC67C80-E0F6-4FF8-B570-7DC5603F9F40.flv'
+pattern = '[c|1|3|2|5|p]'
+out = re.sub(pattern, '-', url)
+print(out)
