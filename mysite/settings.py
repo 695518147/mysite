@@ -24,8 +24,8 @@ SECRET_KEY = 'rmv7#ly0-t-vb&vly!43uu95)6#nzm97zwqq0f0vve6h=taz1%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 # 允许的主机
-# ALLOWED_HOSTS = ['192.168.0.106', '127.0.0.1', 'localhost']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['192.168.0.106', '127.0.0.1', 'localhost']
+# ALLOWED_HOSTS = ['*']
 
 # Application definition
 
