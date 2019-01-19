@@ -8,6 +8,18 @@ $(function () {
         "dom": "<'row'<'col-sm-8'l><'col-sm-4'<'#toolbar'>f>><'row'<'col-sm-12'tr>><'row'<'col-sm-5'i><'col-sm-7'p>>"
     });
     order.init();
+
+
+    $("#number,#typeNumber").on("keyup", function (e) {
+        console.log(this.value)
+        var r = /^\+?[1-9][0-9]*$/;　　//判断是否为正整数
+        if (!r.test(this.value)) {
+            layer.msg('只能输入正整数！', {
+                time: 2000 //20s后自动关闭
+            });
+            $("#" + this.id).val("1")
+        }
+    })
 });
 
 var order = (function () {
@@ -35,26 +47,27 @@ var order = (function () {
             },
             "aLengthMenu": [[5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, "All"]], // 定义每页显示数据数量
             aoColumns: [
-                {mData: "orderName", "width": 40, "title": "指令名称"},
-                {mData: "orderId", "width": 40, "title": "指令代码"},
+                {mData: "orderName", "width": 40, "title": "指令名称", className: "text-center"},
+                {mData: "orderId", "width": 40, "title": "指令代码", className: "text-center"},
                 {
                     mData: "typeId",
                     "width": 40,
                     "visible": true,
                     "title": "指令类别",
                     "defaultContent": "<i>Not set</i>"
+                    , className: "text-center"
                 },
-                {mData: "orderDescription", "width": 40, "title": "指令说明"},
-                {mData: "typeDescription", "width": 40, "title": "类别说明"},
-                {mData: "isShowOrder", "width": 40, "title": "是否显示"},
-                {mData: "createTime", "width": 40, "title": "创建时间"},
-                {mData: "", "width": 40, "title": "操作"},
+                {mData: "orderDescription", "width": 40, "title": "指令说明", className: "text-center"},
+                {mData: "typeDescription", "width": 40, "title": "类别说明", className: "text-center"},
+                {mData: "isShowOrder", "width": 40, "title": "是否显示", className: "text-center"},
+                {mData: "createTime", "width": 40, "title": "创建时间", className: "text-center"},
+                {mData: "", "width": 40, "title": "操作", className: "text-center width"},
             ],
             columnDefs: [
                 {
                     targets: [5],
                     render: function (data, type, row, meta) {
-                        return data == "true" ? "是" : "否";
+                        return data == "true" ? "<div style='text-align: center;'>是</div>" : "<div style='text-align: center;'>否</div>";
                     },
                 },
                 {
@@ -64,13 +77,15 @@ var order = (function () {
                 },
                 {
                     targets: [7],
-                    render: function (data, type, row, meta) {
-                        var str = escape(JSON.stringify(row))
-                        var arr = [];
-                        arr.push('<button type="button" style="margin-left:10px" order=' + str + ' class="btn btn-primary" onclick="order.updateRow(this)">修改</button>')
-                        arr.push('<button type="button" style="margin-left:10px" order=' + str + ' class="btn btn-danger" onclick="order.deleteRow(this)">删除</button>')
-                        return arr.join(" ");
-                    },
+                    render:
+
+                        function (data, type, row, meta) {
+                            var str = escape(JSON.stringify(row))
+                            var arr = [];
+                            arr.push('<button type="button" style="margin-left:10px" order=' + str + ' class="btn btn-primary" onclick="order.updateRow(this)">修改</button>')
+                            arr.push('<button type="button" style="margin-left:10px" order=' + str + ' class="btn btn-danger" onclick="order.deleteRow(this)">删除</button>')
+                            return arr.join(" ");
+                        },
                 }
             ],
             // 是否允许检索
@@ -89,11 +104,17 @@ var order = (function () {
                 $("input[type=search]").addClass("form-control1");
                 $("#toolbar").append("<a href='JavaScript:void(0)' " +
                     "class='btn btn-primary btn-sm'  onclick=\"order.modalHandler('orderModal','add')\">新建指令</a>");
-            },
-            rowCallback: function (row, data, displayNum, displayIndex, dataIndex) {
-                $(row).find("video,img").addClass("adapt");
+
+
+                // datatable
             }
-        });
+
+            ,
+            rowCallback: function (row, data, displayNum, displayIndex, dataIndex) {
+                $(row).find("video,img").addClass("img-rounded").addClass("adapt").zoomify();
+            }
+        })
+        ;
 
     }
 
@@ -116,9 +137,9 @@ var order = (function () {
             operate = callback
             $("#operate").val(operate)
             $("#id").val("");
-            UE.getEditor("orderDescription").setContent( "" )
-            UE.getEditor("orderName").setContent( "" )
-            UE.getEditor("typeDescription").setContent( "" )
+            UE.getEditor("orderDescription").setContent("")
+            UE.getEditor("orderName").setContent("")
+            UE.getEditor("typeDescription").setContent("")
         }
 
         //edit
@@ -151,18 +172,18 @@ var order = (function () {
 
     function instanceUE(id) {
         var ue = UE.getEditor(id, {
-            'toolbars': [['source', '|', 'undo', 'redo', '|', 'bold', 'italic', 'underline', 'formatmatch', 'autotypeset', '|', 'forecolor', 'backcolor', '|', 'link', 'unlink', '|', 'simpleupload', 'insertvideo', 'music', 'attachment', 'map']],
+            'toolbars': [['source', 'undo', 'redo', 'bold', 'italic', 'underline', 'forecolor', 'backcolor', 'superscript', 'subscript', "justifyleft", "justifycenter", "justifyright", "insertorderedlist", "insertunorderedlist", "blockquote", 'formatmatch', "removeformat", 'autotypeset', 'inserttable', "pasteplain", "wordimage", "searchreplace", "map", "preview"], ['paragraph', "fontfamily", "fontsize", 'link', 'unlink', 'simpleupload', 'insertimage', 'insertvideo', 'attachment', 'emotion', "date", "time"]],
             'a': 2,
-            'serverUrl': '/ueditor/controller/?imagePathFormat=image%2Forder&filePathFormat=bb%2F'
+            'serverUrl': '/ueditor/controller/'
         });
     }
 
     function deleteRow(dom) {
-
         var index = layer.confirm('确认删除吗？', {
             btn: ['确认', '取消'] //按钮
         }, function () {
             var order = JSON.parse(unescape($(dom).attr("order")));
+            var $row = $(dom).closest("tr");
             $.ajax({
                 type: "GET",
                 url: "/xiaobing/deleteOrder/",
@@ -174,8 +195,29 @@ var order = (function () {
                 crossDomain: true,
                 data: {id: order.id}
             }).done(function () {
-                mytable.draw()
+                var paths = [];
+                var curWwwPath = window.document.location.href;　　//获取当前网址
+                var pathName = window.document.location.pathname;　　//获取主机地址之后的目录
+                var pos = curWwwPath.indexOf(pathName);
+                var localhostPaht = curWwwPath.substring(0, pos);　　//获取主机地址
+                $row.find("img,video").each(function () {
 
+                    paths.push(this.src.replace(localhostPaht, ""));
+                });
+                $.ajax({
+                    type: "POST",
+                    url: "/xiaobing/deleteFile/",
+                    // 允许携带证书
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    // 允许跨域
+                    crossDomain: true,
+                    data: {paths: JSON.stringify(paths)}
+                })
+
+            }).done(function () {
+                mytable.draw()
             }).done(function () {
                 layer.close(index);
                 layer.msg('删除成功！', {

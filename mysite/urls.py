@@ -15,21 +15,36 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include, re_path
+
+import xadmin
 from mysite import settings
 from django.views.static import serve
 
+from xadmin.plugins import xversion
+from xiaobing import views
+
+
 admin.autodiscover()
+xadmin.autodiscover()
+xversion.register_models()
+
+from xadmin.plugins import xversion
+xversion.register_models()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('xadmin/', xadmin.site.urls),
     path('blog/', include('blog.urls')),
+    path('', views.index),
     path('xiaobing/', include('xiaobing.urls')),
     path('ueditor/', include('djangoUeditor.urls')),
 ]
 
 if settings.DEBUG:
     urlpatterns += [
+        # 媒体文件前缀
         re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+        # 文件前缀
         re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
         re_path(r'^(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT})
         ]

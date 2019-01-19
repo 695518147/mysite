@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'bootstrap3',
     'djangoUeditor',
     'xiaobing',
+    'xadmin',
+    'crispy_forms',
+    'reversion',
 ]
 
 MIDDLEWARE = [
@@ -125,8 +128,8 @@ MEDIA_ROOT = os.path.join(PROJECT_PATH, 'data/').replace('\\', '/')
 MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(PROJECT_PATH, 'www/').replace('\\', '/')
 
-
 UEDITOR_SETTINGS = {
     "test": 1
 }
 
+LOGIN_REDIRECT_URL = '/xiaobing/edit'

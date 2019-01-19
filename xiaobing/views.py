@@ -2,6 +2,7 @@ from django.core import serializers
 from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
+import djangoUeditor.settings as USettings
 from xiaobing.models import Order, OrderType
 from xiaobing.forms import OrderForm
 from pypinyin import pinyin, Style
@@ -10,7 +11,10 @@ from xiaobing.json import DateEncoder
 import json
 import jieba
 import re
-
+import os
+from urllib import parse
+from django.utils.functional import SimpleLazyObject
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.pip
 
@@ -18,8 +22,18 @@ def index(request):
     return render(request, "index.html")
 
 
-def test(request):
-    return render(request, "test_datatable.html")
+def deleteFile(request):
+    paths = request.POST.get("paths")
+    path = json.loads(paths)
+
+    for p in path:
+        pa = p.replace(USettings.gSettings.MEDIA_URL, "")
+        OutputPath = os.path.join(USettings.gSettings.MEDIA_ROOT, pa)
+        filepath = parse.unquote(OutputPath)
+        print(filepath)
+        if os.path.exists(filepath):
+            os.remove(filepath)
+            return HttpResponse('ok')
 
 
 def deleteOrder(request):
@@ -30,6 +44,17 @@ def deleteOrder(request):
         return HttpResponse("1")
     else:
         return HttpResponse("0")
+
+
+def login_require(func):
+    def wrapper(request):
+        print(request.user)
+        if isinstance(request.user, SimpleLazyObject):
+            render("/xadmin?next=" + request.path)
+        else:
+            func(request)
+
+    return wrapper
 
 
 def search(request):
@@ -80,9 +105,9 @@ def search(request):
     return HttpResponse(json.dumps(rest, cls=DateEncoder, ensure_ascii=True), content_type='application/json')
 
 
+@login_required(login_url="/admin/login/")
 def edit(request):
-    orders = Order.objects.all()[:10]
-    return render(request, "add.html", {"orders": orders})
+    return render(request, "add.html")
 
 
 def saveOrder(request):

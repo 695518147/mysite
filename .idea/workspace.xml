@@ -1,7 +1,426 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2d71ab6-9d19-40d2-b17a-e0b09e8e42b0" name="Default Changelist" comment="" />
+    <list default="true" id="b2d71ab6-9d19-40d2-b17a-e0b09e8e42b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/.tx/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/adminx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/layout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/django.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/django.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/migrations/0002_log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/migrations/0003_auto_20160715_0100.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/actions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/aggregation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/ajax.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/batch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/bookmark.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/chart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/comments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/details.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/editable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/export.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/images.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/importexport.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/inline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/language.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/layout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/mobile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/multiselect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/passwords.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/portal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/quickfilter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/quickform.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/refresh.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/relate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/relfield.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/sitemenu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/sortablelist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/themes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/topnav.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/wizard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/plugins/xversion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/sites.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/component.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/themes/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/themes/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/themes/bootstrap-xadmin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.page.dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.aggregation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.formset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.importexport.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.quickfilter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugins.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.widget.editable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.widget.select-transfer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.page.dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.page.form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.page.list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.batch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.bookmark.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.charts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.details.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.editable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.filters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.formset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.importexport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.portal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.quick-form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.quickfilter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.refresh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.revision.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.sortablelist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.themes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.responsive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.datetime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.multiselect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.select-transfer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/autotype/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/css/datepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs-latin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/css/bootstrap-modal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/img/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modalmanager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-multiselect/js/bootstrap-multiselect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/excanvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/excanvas.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.colorhelpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.aggregate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.canvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.categories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.crosshair.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.errorbars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.fillbetween.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.navigate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.pie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.resize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.selection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.stack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.symbol.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.threshold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.time.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/load-image/load-image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/load-image/load-image.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2-spinner.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_pt-PT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_ua.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_zh-hans.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2x2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.legacy.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/snapjs/snap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/snapjs/snap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/snapjs/snap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/user/add_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/user/change_password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/base_site.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/comm.top.setlang.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/comm.top.theme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/comm.top.topnav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/modal_list.left_navbar.quickfilter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_form.before_fieldsets.wizard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_form.submit_line.wizard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.nav_form.search_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.nav_menu.filters.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.results_bottom.actions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.results_top.charts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.results_top.date_hierarchy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.export.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.import.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.layouts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.refresh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.saveorder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/accordion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/blank.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/one.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/stacked.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/tab.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/tabular.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/char.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/checklist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/date.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/fk_search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/number.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/quickfilter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/rel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/forms/transfer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/grids/thumbnails.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/import_export/export_action.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/import_export/import.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/box.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/pagination.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/sitemenu_accordion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/sitemenu_default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/submit_line.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/toggle_back.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/toggle_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/field_value.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/field_value_td.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/fieldset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/input_group.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/td-field.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/app_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/batch_change_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/invalid_setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/logged_out.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_delete_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_delete_selected_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_history.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/quick_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/quick_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/recover_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/recover_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/revision_diff.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/revision_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/addform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/chart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/qbutton.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/templatetags/xadmin_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/vendors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/views/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/views/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/views/dashboard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/views/delete.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/views/detail.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/views/edit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/views/form.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/views/list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/views/website.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xadmin/widgets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/dist/zoomify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/dist/zoomify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/dist/zoomify.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/dist/zoomify.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/img/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/img/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/img/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/img/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/img/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/img/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/img/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/jquery插件库.url" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/src/zoomify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/src/zoomify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/jquery-enlargement/www.jq22.com.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xiaobing/static/user-defind/order.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mysite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mysite.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoUeditor/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoUeditor/adminx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoUeditor/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoUeditor/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoUeditor/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoUeditor/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/pip.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python.md" beforeDir="false" afterPath="$PROJECT_DIR$/python.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiaobing/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/xiaobing/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiaobing/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/xiaobing/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiaobing/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/xiaobing/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiaobing/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/xiaobing/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiaobing/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/xiaobing/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiaobing/static/js/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/xiaobing/static/user-defind/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiaobing/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/xiaobing/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiaobing/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/xiaobing/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiaobing/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/xiaobing/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiaobing/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/xiaobing/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,32 +441,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/templates/add.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="380" column="13" lean-forward="true" selection-start-line="355" selection-start-column="13" selection-end-line="380" selection-end-column="13" />
-              <folding>
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="e#6529#6604#0#HTML" />
-                <element signature="e#6624#6647#0#HTML" />
-                <element signature="e#6671#7279#0#HTML" />
-                <element signature="e#7309#7751#0#HTML" />
-                <element signature="e#8397#8734#0#HTML" />
-                <element signature="e#9019#10819#0#HTML" />
-                <element signature="e#10845#11471#0#HTML" />
-                <element signature="e#9121#10377#0#HTML" />
-                <element signature="e#10408#11548#0#HTML" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/views.py">
+        <entry file="file://$PROJECT_DIR$/xiaobing/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            <state relative-caret-position="141">
+              <caret line="113" selection-start-line="113" selection-end-line="113" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -56,31 +454,58 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.virtualenvs/django_demo/lib/python3.7/site-packages/django/core/handlers/base.py">
+        <entry file="file://$PROJECT_DIR$/xadmin/sites.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="848">
-              <caret line="123" selection-start-line="123" selection-end-line="123" />
+            <state relative-caret-position="72">
+              <caret line="335" selection-start-line="335" selection-end-line="335" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/xiaobing/templates/add.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="96" column="92" selection-start-line="96" selection-start-column="92" selection-end-line="96" selection-end-column="92" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/models.py">
+        <entry file="file://$PROJECT_DIR$/xiaobing/static/user-defind/order.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="20" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="20" />
+            <state relative-caret-position="160">
+              <caret line="206" selection-start-line="206" selection-end-line="206" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/urls.py">
+        <entry file="file://$PROJECT_DIR$/mysite/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+            <state relative-caret-position="154">
+              <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+              <folding>
+                <element signature="e#630#662#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xiaobing/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#11#39#0" expanded="true" />
               </folding>
@@ -100,19 +525,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>settings</find>
-      <find># /\*.*\*/</find>
-      <find>UEDITOR_HOME_URL</find>
-      <find>HTMLField</find>
-      <find>QINIU_BUCKET</find>
-      <find>code</find>
-      <find>join</find>
-      <find>has_key</find>
-      <find>.has_key()</find>
-      <find>utils</find>
-      <find>, content_type=&quot;application/javascript&quot;</find>
-      <find>long</find>
-      <find>isinstance(size, int)</find>
       <find>FileSize</find>
       <find>basejoin</find>
       <find>urllib.basejoin</find>
@@ -130,6 +542,19 @@
       <find>search</find>
       <find>render</find>
       <find>console</find>
+      <find>get_storage</find>
+      <find>USettings</find>
+      <find>我的公司</find>
+      <find>Django Xadmin</find>
+      <find>login</find>
+      <find>请登录</find>
+      <find>LOGIN_REDIRECT_URL</find>
+      <find>login.html</find>
+      <find>Django 管理</find>
+      <find>管理</find>
+      <find>Django[.\s\S]*管理</find>
+      <find>8000</find>
+      <find>alert</find>
     </findStrings>
     <replaceStrings>
       <replace>post</replace>
@@ -143,17 +568,11 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../mysite" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/blog/admin.py" />
-        <option value="$PROJECT_DIR$/blog/urls.py" />
-        <option value="$PROJECT_DIR$/blog/tests.py" />
-        <option value="$PROJECT_DIR$/user/urls.py" />
-        <option value="$PROJECT_DIR$/问题.md" />
-        <option value="$PROJECT_DIR$/user/templates/user.html" />
         <option value="$PROJECT_DIR$/user/views.py" />
         <option value="$PROJECT_DIR$/user/models.py" />
         <option value="$PROJECT_DIR$/user.txt" />
@@ -164,17 +583,13 @@
         <option value="$PROJECT_DIR$/文档.md" />
         <option value="$PROJECT_DIR$/xiaobing/templates/xiaobing1.html" />
         <option value="$PROJECT_DIR$/xiaobing/templates/edit.html" />
-        <option value="$PROJECT_DIR$/pip.sh" />
         <option value="$PROJECT_DIR$/xiaobing/static/ueEdit/index.html" />
         <option value="$PROJECT_DIR$/xiaobing/templates/xiaobing.html" />
-        <option value="$PROJECT_DIR$/xiaobing/admin.py" />
         <option value="$PROJECT_DIR$/xiaobing/tests.py" />
         <option value="$PROJECT_DIR$/xiaobing/templates/index.html" />
-        <option value="$PROJECT_DIR$/xiaobing/settings.py" />
         <option value="$PROJECT_DIR$/xiaobing/static/ueedit/jsp/controller.jsp" />
         <option value="$PROJECT_DIR$/xiaobing/static/ueedit/ueditor.config.js" />
         <option value="$PROJECT_DIR$/xiaobing/forms.py" />
-        <option value="$PROJECT_DIR$/xiaobing/urls.py" />
         <option value="$PROJECT_DIR$/djangoUeditor/models.py" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/djangoUeditor/settings.py" />
@@ -182,19 +597,33 @@
         <option value="$PROJECT_DIR$/djangoUeditor/commands.py" />
         <option value="$PROJECT_DIR$/djangoUeditor/forms.py" />
         <option value="$PROJECT_DIR$/djangoUeditor/utils.py" />
-        <option value="$PROJECT_DIR$/mysite/urls.py" />
         <option value="$PROJECT_DIR$/djangoUeditor/views.py" />
         <option value="$PROJECT_DIR$/djangoUeditor/widgets.py" />
         <option value="$PROJECT_DIR$/djangoUeditor/urls.py" />
         <option value="$PROJECT_DIR$/xiaobing/static/bootstrap-jq/user-defined/user-defined.css" />
         <option value="$PROJECT_DIR$/xiaobing/static/bootstrap-jq/user-defined/user-defined.js" />
-        <option value="$PROJECT_DIR$/xiaobing/templates/add.html" />
-        <option value="$PROJECT_DIR$/mysite/settings.py" />
         <option value="$PROJECT_DIR$/xiaobing/models.py" />
+        <option value="$PROJECT_DIR$/xadmin/plugins/wizard.py" />
+        <option value="$PROJECT_DIR$/pip.sh" />
+        <option value="$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/DjangoUeditor/models.py" />
+        <option value="$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/DjangoUeditor/widgets.py" />
+        <option value="$PROJECT_DIR$/djangoUeditor/adminx.py" />
+        <option value="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/django.po" />
+        <option value="$PROJECT_DIR$/xiaobing/__init__.py" />
+        <option value="$PROJECT_DIR$/xiaobing/apps.py" />
+        <option value="$PROJECT_DIR$/xadmin/views/base.py" />
+        <option value="$PROJECT_DIR$/mysite/settings.py" />
+        <option value="$PROJECT_DIR$/xiaobing/settings.py" />
         <option value="$PROJECT_DIR$/xiaobing/views.py" />
-        <option value="$PROJECT_DIR$/../mysite/xiaobing/urls.py" />
-        <option value="$PROJECT_DIR$/../mysite/xiaobing/views.py" />
-        <option value="$PROJECT_DIR$/../mysite/xiaobing/templates/add.html" />
+        <option value="$PROJECT_DIR$/xiaobing/admin.py" />
+        <option value="$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/django/forms/boundfield.py" />
+        <option value="$PROJECT_DIR$/mysite/urls.py" />
+        <option value="$PROJECT_DIR$/xiaobing/urls.py" />
+        <option value="$PROJECT_DIR$/xiaobing/urls.py" />
+        <option value="$PROJECT_DIR$/xiaobing/views.py" />
+        <option value="$PROJECT_DIR$/xiaobing/static/user-defind/order.js" />
+        <option value="$PROJECT_DIR$/xiaobing/templates/add.html" />
+        <option value="$PROJECT_DIR$/xiaobing/templates/add.html" />
       </list>
     </option>
   </component>
@@ -209,90 +638,56 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="django_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="django_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="django_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="djangoUeditor" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="django_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="djangoUeditor" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="user-defind" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="django_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
+              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
-              <item name="django_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap-jq" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap-jq" type="462c0819:PsiDirectoryNode" />
-              <item name="user-defined" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="DataTables-1.10.15" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="DataTables-1.10.15" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="DataTables-1.10.15" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="django_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 (mysite1) &gt;" type="70bed36:NamedLibraryElementNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -302,19 +697,19 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/../mysite/xiaobing/static" />
-      <recent name="$PROJECT_DIR$/xiaobing/templates" />
-      <recent name="$PROJECT_DIR$/xiaobing" />
-      <recent name="$PROJECT_DIR$/xiaobing/static/ueedit" />
-      <recent name="$PROJECT_DIR$/xiaobing/static" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/xiaobing/templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/xiaobing/static" />
+      <recent name="$PROJECT_DIR$/xiaobing/templates" />
+      <recent name="$PROJECT_DIR$/xiaobing" />
+      <recent name="$PROJECT_DIR$/xiaobing/static/ueedit" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -329,112 +724,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.mysite">
-    <configuration name="Test: blog.tests.BlogPostTest.test_empty_create" type="DjangoTestsConfigurationType" temporary="true">
-      <module name="mysite" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="blog.tests.BlogPostTest.test_empty_create" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Test: blog.tests.BlogPostTest.test_post_create" type="DjangoTestsConfigurationType" temporary="true">
-      <module name="mysite" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="blog.tests.BlogPostTest.test_post_create" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Test: blog.tests.BlogPostTest.test_slash" type="DjangoTestsConfigurationType" temporary="true">
-      <module name="mysite" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="blog.tests.BlogPostTest.test_slash" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="mysite" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="mysite" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/xiaobing" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xiaobing/tests.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="mysite" type="Python.DjangoServer" factoryName="Django server">
+  <component name="RunManager">
+    <configuration name="mysite1" type="Python.DjangoServer" factoryName="Django server">
       <module name="mysite" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -442,39 +733,22 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="mysite.settings" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/django_demo/bin/python" />
+      <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/mysite1/bin/python" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8080" />
-      <option name="host" value="192.168.0.103" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="http://192.168.0.103:8080/xiaobing/edit/" />
+      <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Django server.mysite" />
-      <item itemvalue="Django tests.Test: blog.tests.BlogPostTest.test_empty_create" />
-      <item itemvalue="Django tests.Test: blog.tests.BlogPostTest.test_post_create" />
-      <item itemvalue="Django tests.Test: blog.tests.BlogPostTest.test_slash" />
-      <item itemvalue="Python.test1" />
-      <item itemvalue="Python.tests" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.tests" />
-        <item itemvalue="Python.test1" />
-        <item itemvalue="Django tests.Test: blog.tests.BlogPostTest.test_post_create" />
-        <item itemvalue="Django tests.Test: blog.tests.BlogPostTest.test_empty_create" />
-        <item itemvalue="Django tests.Test: blog.tests.BlogPostTest.test_slash" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -504,6 +778,8 @@
       <workItem from="1547625921377" duration="937000" />
       <workItem from="1547627012618" duration="404000" />
       <workItem from="1547627421838" duration="8316000" />
+      <workItem from="1547864369311" duration="1224000" />
+      <workItem from="1547865599282" duration="18871000" />
     </task>
     <task id="LOCAL-00001" summary="富文本优化">
       <created>1547627070194</created>
@@ -548,19 +824,19 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115736000" />
+    <option name="totallyTimeSpent" value="135831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49809885" visible="true" weight="0.16094421" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49809885" weight="0.16523606" />
       <window_info id="Structure" order="1" sideWeight="0.50190115" side_tool="true" weight="0.24964234" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -576,6 +852,29 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49809885" visible="true" weight="0.16523606" />
+      <window_info id="Structure" order="1" sideWeight="0.50190115" side_tool="true" weight="0.24964234" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299363" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49928468" weight="0.3299363" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -595,7 +894,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
-      <path value="$PROJECT_DIR$/../mysite" />
+      <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="富文本优化" />
     <option name="LAST_COMMIT_MESSAGE" value="富文本优化" />
@@ -604,166 +903,56 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../mysite/djangoUeditor/utils.py</url>
+          <url>file://$PROJECT_DIR$/djangoUeditor/utils.py</url>
           <line>14</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../mysite/djangoUeditor/utils.py</url>
+          <url>file://$PROJECT_DIR$/djangoUeditor/utils.py</url>
           <line>8</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../mysite/djangoUeditor/utils.py</url>
+          <url>file://$PROJECT_DIR$/djangoUeditor/utils.py</url>
           <line>7</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../mysite/djangoUeditor/utils.py</url>
+          <url>file://$PROJECT_DIR$/djangoUeditor/utils.py</url>
           <line>17</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/xiaobing/views.py</url>
+          <line>50</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/xiaobing/views.py</url>
+          <line>113</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.3/python_stubs/181604195/builtins.py">
+    <entry file="file://$PROJECT_DIR$/xadmin/plugins/importexport.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="180" column="4" selection-start-line="180" selection-start-column="4" selection-end-line="180" selection-end-column="4" />
+        <state relative-caret-position="208">
+          <caret line="51" column="15" selection-start-line="51" selection-start-column="15" selection-end-line="51" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/blog/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/django_demo/lib/python3.7/site-packages/DjangoUeditor/settings.py" />
-    <entry file="file://$PROJECT_DIR$/../mysite/mysite/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/blog/views.py">
+    <entry file="file://$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/DjangoUeditor/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/templates/test2.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/django_demo/lib/python3.7/site-packages/django/shortcuts.py">
+    <entry file="file://$PROJECT_DIR$/djangoUeditor/widgets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/django_demo/lib/python3.7/site-packages/django/forms/boundfield.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="93" column="9" lean-forward="true" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/django_demo/lib/python3.7/site-packages/urllib3/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/local/Cellar/python/3.7.2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/djangoUeditor/commands.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="142" column="35" selection-start-line="142" selection-start-column="35" selection-end-line="142" selection-end-column="35" />
-          <folding>
-            <element signature="e#15#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/django_demo/lib/python3.7/site-packages/utils/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/django_demo/lib/python3.7/site-packages/django/views/decorators/csrf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/blog/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/django_demo/lib/python3.7/site-packages/django/utils/autoreload.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="278" selection-start-line="278" selection-end-line="278" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/data/cool/jgxq_20190115201309_651.jpg" />
-    <entry file="file://$PROJECT_DIR$/mysite/data/cool/jgxq_20190115201122_430.jpg" />
-    <entry file="file://$USER_HOME$/.virtualenvs/django_demo/lib/python3.7/site-packages/django/views/static.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/django_demo/lib/python3.7/site-packages/django/urls/conf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python/3.7.2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1532" />
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python/3.7.2/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/parse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="478" column="11" selection-start-line="478" selection-start-column="4" selection-end-line="478" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/djangoUeditor/static/ueditor/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2221" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/djangoUeditor/templates/ueditor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#script#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/mysite/data/cool/1_20190115205412_260.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/mysite/data/2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/djangoUeditor/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-          <folding>
-            <element signature="e#16#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/djangoUeditor/widgets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="418">
           <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="e#15#39#0" expanded="true" />
@@ -771,24 +960,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/djangoUeditor/utils.py">
+    <entry file="file://$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/DjangoUeditor/widgets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="34" column="28" selection-start-line="12" selection-start-column="3" selection-end-line="34" selection-end-column="28" />
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/mysite/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-          <folding>
-            <element signature="e#630#662#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/djangoUeditor/urls.py">
+    <entry file="file://$PROJECT_DIR$/djangoUeditor/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
@@ -798,174 +977,368 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/djangoUeditor/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/djangoUeditor/static/ueditor/php/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/djangoUeditor/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="302" selection-start-line="5" selection-start-column="297" selection-end-line="5" selection-end-column="302" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/settings.py">
+    <entry file="file://$PROJECT_DIR$/user.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/django_demo/lib/python3.7/site-packages/django/contrib/admin/options.py">
+    <entry file="file://$PROJECT_DIR$/djangoUeditor/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="537" column="6" selection-start-line="537" selection-start-column="6" selection-end-line="537" selection-end-column="6" />
+        <state relative-caret-position="60">
+          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/django_demo/lib/python3.7/site-packages/django/db/models/base.py">
+    <entry file="file://$PROJECT_DIR$/djangoUeditor/adminx.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="382" column="6" selection-start-line="382" selection-start-column="6" selection-end-line="382" selection-end-column="6" />
+        <state relative-caret-position="120">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/django_demo/lib/python3.7/site-packages/django/db/models/fields/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="1036" selection-start-line="1036" selection-end-line="1036" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/forms.py">
+    <entry file="file://$PROJECT_DIR$/xiaobing/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <folding>
-            <element signature="e#15#39#0" expanded="true" />
-          </folding>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/blog/admin.py">
+    <entry file="file://$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/django/apps/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-994">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/blog/models.py">
+    <entry file="file://$PROJECT_DIR$/xiaobing/apps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        <state relative-caret-position="45">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/static/bootstrap-jq/typeconfig.json">
+    <entry file="file://$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/django/db/models/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7410">
-          <caret line="494" column="144" selection-start-line="494" selection-start-column="132" selection-end-line="494" selection-end-column="144" />
+        <state relative-caret-position="148">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/static/bootstrap-jq/user-defined/user-defined.js">
+    <entry file="file://$PROJECT_DIR$/pip.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="68" column="14" lean-forward="true" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
-          <folding>
-            <element signature="e#145#1830#0" />
-          </folding>
+        <state relative-caret-position="341">
+          <caret line="27" selection-start-line="27" selection-end-line="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/templates/index.html">
+    <entry file="file://$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/django/core/servers/basehttp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="43" column="33" lean-forward="true" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="148">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/static/bootstrap-jq/user-defined/user-defined.css">
+    <entry file="file://$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding>
-            <element signature="e#11#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/static/DataTables-1.10.15/media/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/mysite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1635">
-          <caret line="109" column="25" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/django_demo/lib/python3.7/site-packages/django/core/handlers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
+        <state relative-caret-position="375">
           <caret line="123" selection-start-line="123" selection-end-line="123" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/views.py">
+    <entry file="file://$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/django/contrib/auth/decorators.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state relative-caret-position="148">
+          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/static/xadmin/component.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/django.po">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2195">
+          <caret line="1182" column="8" selection-start-line="1182" selection-start-column="8" selection-end-line="1182" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/adminx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-146">
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/layout.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-661">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/vendors.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/widgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-628">
+          <folding>
+            <element signature="e#63#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiaobing/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/plugins/auth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2845" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/plugins/actions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1063">
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/models.py">
+    <entry file="file://$PROJECT_DIR$/xadmin/plugins/aggregation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="20" />
+        <state>
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#73#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mysite/xiaobing/templates/add.html">
+    <entry file="file://$PROJECT_DIR$/xadmin/plugins/layout.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="380" column="13" lean-forward="true" selection-start-line="355" selection-start-column="13" selection-end-line="380" selection-end-column="13" />
+        <state relative-caret-position="-641">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/plugins/xversion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2132">
           <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#6529#6604#0#HTML" />
-            <element signature="e#6624#6647#0#HTML" />
-            <element signature="e#6671#7279#0#HTML" />
-            <element signature="e#7309#7751#0#HTML" />
-            <element signature="e#8397#8734#0#HTML" />
-            <element signature="e#9019#10819#0#HTML" />
-            <element signature="e#10845#11471#0#HTML" />
-            <element signature="e#9121#10377#0#HTML" />
-            <element signature="e#10408#11548#0#HTML" />
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/plugins/wizard.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-344">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/templates/xadmin/views/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-520" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/views/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3881">
+          <caret line="322" column="59" selection-start-line="322" selection-start-column="59" selection-end-line="322" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/views/website.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-236">
+          <caret line="62" column="66" selection-start-line="62" selection-start-column="66" selection-end-line="62" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/views/form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-233">
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/plugins/ajax.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiaobing/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/django/forms/boundfield.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-719">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/django/views/static.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="e#618#2187#0" />
+            <element signature="e#2225#2869#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/django/templatetags/static.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/bootstrap3/templatetags/bootstrap3.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/templatetags/xadmin_tags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+          <folding>
+            <element signature="e#630#662#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiaobing/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#11#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/sites.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="335" selection-start-line="335" selection-end-line="335" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiaobing/static/user-defind/order.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="206" selection-start-line="206" selection-end-line="206" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiaobing/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiaobing/templates/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="96" column="92" selection-start-line="96" selection-start-column="92" selection-end-line="96" selection-end-column="92" />
         </state>
       </provider>
     </entry>

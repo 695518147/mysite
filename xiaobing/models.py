@@ -1,7 +1,5 @@
 from django.db import models
-from django import forms
 from djangoUeditor.models import UEditorField
-from djangoUeditor.commands import *
 
 
 # Create your models here.
@@ -10,9 +8,9 @@ class Order(models.Model):
     isShow = models.CharField(u'是否显示指令说明', max_length=10, null=True, blank=True)
     isShowOrder = models.CharField(u'是否显示该条指令', max_length=10, null=True, blank=True)
     orderId = models.CharField(max_length=100, null=True, blank=True)
-    orderName = UEditorField(u'指令名称', blank=True, toolbars="mini", imagePath="image/order", settings={"a": 1})
-    orderDescription = UEditorField(u'指令说明', default='test', imagePath="image/order", toolbars="mini")
-    typeDescription = UEditorField(u'类型说明', toolbars="mini", default='test', imagePath="image/order")
+    orderName = UEditorField(u'指令名称', blank=True,settings={"a": 1})
+    orderDescription = UEditorField(u'指令说明')
+    typeDescription = UEditorField(u'类型说明')
 
     createTime = models.DateTimeField(u'创建时间')
     number = models.IntegerField(u'排序', default=99)

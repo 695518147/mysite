@@ -1,0 +1,63 @@
+/*{# 此class特别重要对于富文本的显示 #}*/
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1004;
+    background-color: #000;
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin: 10px 0 0;
+}
+
+#datatable_filter {
+    width: 70%;
+}
+
+#datatable_filter label {
+    width: 90%;
+}
+
+
+.dataTables_wrapper.no-footer .dataTables_scrollBody {
+    border-bottom: 2px solid #111;
+}
+
+.form-control1 {
+    width: 75%;
+    height: 20px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+#toolbar {
+    width: 30%;
+    display: inline-block;
+    padding-left: 20%;
+    padding-top: 2px;
+}
+
+.width {
+    width: 130px;
+}

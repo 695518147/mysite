@@ -5,8 +5,8 @@
 import xadmin
 from django.db.models import TextField
 from xadmin.views import BaseAdminPlugin, ModelFormAdminView, DetailAdminView
-from DjangoUeditor.models import UEditorField
-from DjangoUeditor.widgets import UEditorWidget
+from djangoUeditor.models import UEditorField
+from djangoUeditor.widgets import UEditorWidget
 from django.conf import settings
 
 class XadminUEditorWidget(UEditorWidget):

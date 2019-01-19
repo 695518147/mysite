@@ -3,7 +3,7 @@ from django.conf import settings as gSettings   #全局设置
 
 #工具栏样式，可以添加任意多的模式
 TOOLBARS_SETTINGS={
-    "besttome":[['source','undo', 'redo','bold', 'italic', 'underline','forecolor', 'backcolor','superscript','subscript',"justifyleft","justifycenter","justifyright","insertorderedlist","insertunorderedlist","blockquote",'formatmatch',"removeformat",'autotypeset','inserttable',"pasteplain","wordimage","searchreplace","map","preview","fullscreen"], ['insertcode','paragraph',"fontfamily","fontsize",'link', 'unlink','insertimage','insertvideo','attachment','emotion',"date","time"]],
+    "besttome":[['source','undo', 'redo','bold', 'italic', 'underline','forecolor', 'backcolor','superscript','subscript',"justifyleft","justifycenter","justifyright","insertorderedlist","insertunorderedlist","blockquote",'formatmatch',"removeformat",'autotypeset','inserttable',"pasteplain","wordimage","searchreplace","map","preview","fu llscreen"], ['insertcode','paragraph',"fontfamily","fontsize",'link', 'unlink','insertimage','insertvideo','attachment','emotion',"date","time"]],
     "mini":[['source','|','undo', 'redo', '|','bold', 'italic', 'underline','formatmatch','autotypeset', '|', 'forecolor', 'backcolor','|', 'link', 'unlink','|','simpleupload','attachment']],
     "normal":[['source','|','undo', 'redo', '|','bold', 'italic', 'underline','removeformat', 'formatmatch','autotypeset', '|', 'forecolor', 'backcolor','|', 'link', 'unlink','|','simpleupload', 'emotion','attachment', '|','inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols']]
 }
@@ -21,7 +21,7 @@ UEditorUploadSettings={
     "imageMaxSize": 10485760, #上传大小限制，单位B,10M
     "imageFieldName": "upfile", #* 提交的图片表单名称 */
     "imageUrlPrefix":"",
-    "imagePathFormat":"",
+    "imagePathFormat":"image/%(basename)s_%(datetime)s_%(rnd)s.%(extname)s",
     "imageAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"], #上传图片格式显示
 
     #涂鸦图片上传配置项 */
@@ -46,7 +46,7 @@ UEditorUploadSettings={
     "catcherUrlPrefix":"",
     #上传视频配置 */
     "videoActionName": "uploadvideo", #执行上传视频的action名称 */
-    "videoPathFormat":"",
+    "videoPathFormat":"video/%(basename)s_%(datetime)s_%(rnd)s.%(extname)s",
     "videoFieldName": "upfile", # 提交的视频表单名称 */
     "videoMaxSize": 102400000, #上传大小限制，单位B，默认100MB */
     "videoUrlPrefix":"",
@@ -56,7 +56,7 @@ UEditorUploadSettings={
 
     #上传文件配置 */
     "fileActionName": "uploadfile", #controller里,执行上传视频的action名称 */
-    "filePathFormat":"",
+    "filePathFormat":"file/%(basename)s_%(datetime)s_%(rnd)s.%(extname)s",
     "fileFieldName": "upfile",#提交的文件表单名称 */
     "fileMaxSize": 204800000, #上传大小限制，单位B，200MB */
     "fileUrlPrefix": "",#文件访问路径前缀 */

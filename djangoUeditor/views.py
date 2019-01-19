@@ -259,6 +259,7 @@ def catcher_remote_image(request):
                 "filename": remote_original_name
             })
             # 计算保存的文件名
+            print(request.GET.get("catcherPathFormat"))
             o_path_format, o_path, o_file = get_output_path(request, "catcherPathFormat", path_format_var)
             o_filename = os.path.join(o_path, o_file).replace("\\", "/")
             # 读取远程图片文件
@@ -295,7 +296,7 @@ def catcher_remote_image(request):
 def get_output_path(request, path_format, path_format_var):
     # 取得输出文件的路径
     OutputPathFormat = (
-            request.GET.get(path_format, USettings.UEditorSettings["defaultPathFormat"]) % path_format_var).replace(
+            USettings.UEditorUploadSettings.get(path_format, USettings.UEditorSettings["defaultPathFormat"]) % path_format_var).replace(
         "\\", "/")
     # 分解OutputPathFormat
     OutputPath, OutputFile = os.path.split(OutputPathFormat)

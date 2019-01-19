@@ -7,3 +7,9 @@
 
 
 ## 2.python的str，unicode对象的encode和decode方法
+
+## 3.python re.sub 用法
+
+## 4.json.dumps()与json.dump()区别   json.loads()与json.load()区别
+
+## 5.Unicode编码 UTF-8编码 URL编码/解码

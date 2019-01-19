@@ -19,61 +19,11 @@
     <link type="text/css" rel="stylesheet" href="/static/DataTables-1.10.15/media/css/jquery.dataTables.min.css"/>
     <link type="text/css" rel="stylesheet" href="/static/DataTables-1.10.15/media/css/bootstrap-responsive.min.css"/>
     <link type="text/css" rel="stylesheet" href="/static/layer-v3.1.1/mobile/need/layer.css"/>
-    <style type="text/css">
-        {# 此class特别重要对于富文本的显示 #}
-        .modal-backdrop {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 1004;
-            background-color: #000;
-        }
+    <link type="text/css" rel="stylesheet" href="/static/user-defind/order.css"/>
 
-        input[type=checkbox], input[type=radio] {
-            margin: 10px 0 0;
-        }
-
-        #datatable_filter {
-            width: 70%;
-        }
-
-        #datatable_filter label {
-            width: 90%;
-        }
-
-
-        .dataTables_wrapper.no-footer .dataTables_scrollBody{
-            border-bottom: 2px solid #111;
-        }
-
-        #toolbar {
-            width: 30%;
-            display: inline-block;
-            padding-left: 25%;
-        }
-
-        .form-control1 {
-            width: 75%;
-            height: 34px;
-            padding: 6px 12px;
-            font-size: 14px;
-            line-height: 1.42857143;
-            color: #555;
-            background-color: #fff;
-            background-image: none;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="/static/jquery-enlargement/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/static/jquery-enlargement/dist/zoomify.min.css">
+    <link rel="stylesheet" href="/static/jquery-enlargement/css/style.css">
 </head>
 <body class="container-fluid" style="overflow-x: hidden">
 <div class="panel panel-primary">
@@ -97,13 +47,14 @@
                     新增指令
                 </h4>
             </div>
-            <div class="modal-body">
-                <div id="orderForm" class="form-horizontal">
+            <form id="orderForm" class="form-horizontal" action="/xiaobing/saveOrder/?aa=12" method="post">
+                <div class="modal-body">
+
                     {% csrf_token %}
                     <div class="form-group">
                         <label for="typeId" class="col-sm-2 control-label">指令类别</label>
                         <div class="col-sm-10">
-                            <select class="form-control" id="typeId">
+                            <select class="form-control" id="typeId" name="typeId">
                             </select><!-- 按钮触发模态框 -->
                             <button class="btn btn-primary" data-toggle="modal" onclick="order.modalHandler('myModal')">
                                 新增指令类别
@@ -113,7 +64,7 @@
                     <div class="form-group">
                         <label for="orderName" class="col-sm-2 control-label">指令名称</label>
                         <div class="col-sm-10" style="height: 20%">
-                            <textarea id="orderName" placeholder="指令名称"></textarea>
+                            <textarea id="orderName" name="orderName" placeholder="指令名称"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
@@ -125,7 +76,7 @@
                     <div class="form-group">
                         <label for="orderDescription" class="col-sm-2 control-label">指令说明</label>
                         <div class="col-sm-10">
-                            <textarea id="orderDescription" placeholder="指令说明"></textarea>
+                            <textarea id="orderDescription" name="orderDescription" placeholder="指令说明"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
@@ -137,24 +88,25 @@
                     <div class="form-group">
                         <label for="typeDescription" class="col-sm-2 control-label">类别说明</label>
                         <div class="col-sm-10">
-                            <textarea id="typeDescription" placeholder="类别说明"></textarea>
+                            <textarea id="typeDescription" name="typeDescription" placeholder="类别说明"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="number" class="col-sm-2 control-label">排序号</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="number" placeholder="排序号" value="99">
+                            <input type="text" class="form-control" id="number" name="number" placeholder="排序号" value="1">
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
-                </button>
-                <button type="button" onclick="order.saveOrder()" class="btn btn-primary">
-                    保存
-                </button>
-            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <input type="submit" class="btn btn-primary" value="保存">
+
+                    </input>
+                </div>
+            </form>
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->
 </div>
@@ -182,7 +134,7 @@
                     <div class="form-group">
                         <label for="typeNumber" class="col-sm-2 control-label">排序号</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="typeNumber" placeholder="排序号" value="99">
+                            <input type="text" class="form-control" id="typeNumber" placeholder="排序号" value="1">
                         </div>
                     </div>
                 </div>
@@ -202,8 +154,9 @@
 
 
 <script type="text/javascript" src="http://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="/static/js/order.js"></script>
+<script type="text/javascript" src="/static/user-defind/order.js"></script>
 <script type="text/javascript" src="/static/layer-v3.1.1/layer.js"></script>
+<script type="text/javascript" src="/static/jquery-enlargement/dist/zoomify.min.js"></script>
 
 </body>
 </html>
