@@ -16,6 +16,7 @@ from urllib import parse
 from django.utils.functional import SimpleLazyObject
 from django.contrib.auth.decorators import login_required
 
+
 # Create your views here.pip
 
 def index(request):
@@ -46,17 +47,6 @@ def deleteOrder(request):
         return HttpResponse("0")
 
 
-def login_require(func):
-    def wrapper(request):
-        print(request.user)
-        if isinstance(request.user, SimpleLazyObject):
-            render("/xadmin?next=" + request.path)
-        else:
-            func(request)
-
-    return wrapper
-
-
 def search(request):
     isShow = ['是', '否']
     if request.method == 'POST':
@@ -68,10 +58,10 @@ def search(request):
                          param['search']['value'].replace(' ', '').replace('<p>', '?').replace('</p>', '?'))
 
         sorts = param['order'][0]['dir']
-        if (sorts == "ASC") | (sorts == "asc"):
-            order_by = "createTime"
-        else:
+        if (sorts == "desc") | (sorts == "DESC"):
             order_by = "-createTime"
+        else:
+            order_by = "createTime"
         # 分词
         arr = " ".join(jieba.cut(keyword)).split(" ")
         q = Q(orderId__icontains=keyword) | Q(typeId__icontains=keyword)
@@ -105,7 +95,7 @@ def search(request):
     return HttpResponse(json.dumps(rest, cls=DateEncoder, ensure_ascii=True), content_type='application/json')
 
 
-@login_required(login_url="/admin/login/")
+@login_required(login_url="/xadmin/")
 def edit(request):
     return render(request, "add.html")
 

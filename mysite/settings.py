@@ -22,10 +22,10 @@ PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 SECRET_KEY = 'rmv7#ly0-t-vb&vly!43uu95)6#nzm97zwqq0f0vve6h=taz1%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 # 允许的主机
-ALLOWED_HOSTS = ['192.168.0.106', '127.0.0.1', 'localhost']
-# ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['192.168.0.106', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'xadmin',
     'crispy_forms',
     'reversion',
+    'error',
 ]
 
 MIDDLEWARE = [
@@ -132,4 +133,5 @@ UEDITOR_SETTINGS = {
     "test": 1
 }
 
-LOGIN_REDIRECT_URL = '/xiaobing/edit'
+# 登录后跳转页面
+LOGIN_REDIRECT_URL = '/xadmin/'
