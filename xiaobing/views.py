@@ -23,6 +23,11 @@ def index(request):
     return render(request, "index.html")
 
 
+def info(request):
+    string = request._current_scheme_host
+    return HttpResponse("Successful start-up of the service at address " + string)
+
+
 def deleteFile(request):
     paths = request.POST.get("paths")
     path = json.loads(paths)

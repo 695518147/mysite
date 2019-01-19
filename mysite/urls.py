@@ -13,6 +13,7 @@ xadmin.autodiscover()
 xversion.register_models()
 
 from xadmin.plugins import xversion
+from xiaobing import views
 
 xversion.register_models()
 
@@ -22,6 +23,7 @@ urlpatterns = [
     path('xadmin/', xadmin.site.urls),
     path('blog/', include('blog.urls')),
     path('xiaobing/', include('xiaobing.urls')),
+    path('info/', views.info),
     path('ueditor/', include('djangoUeditor.urls')),
 ]
 
