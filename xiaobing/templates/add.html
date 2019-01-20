@@ -35,7 +35,7 @@
     </div>
 </div>
 
-<!-- 指令新增模态框（Modal） -->
+<!-- 指令新增    模态框（Modal） -->
 <div class="modal fade bs-example-modal-lg" id="orderModal" tabindex="-9" style="z-index: 1005" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -48,14 +48,14 @@
                 </h4>
             </div>
             <div class="modal-body">
-                <form id="orderForm" class="form-horizontal" method="post">
+                <form id="orderForm" class="form-horizontal">
                     {% csrf_token %}
                     <div class="form-group">
                         <label for="typeId" class="col-sm-2 control-label">指令类别</label>
                         <div class="col-sm-10">
                             <select class="form-control" id="typeId" name="typeId">
                             </select><!-- 按钮触发模态框 -->
-                            <button class="btn btn-primary" data-toggle="modal" onclick="order.modalHandler('myModal')">
+                            <button class="btn btn-primary" type="button" data-toggle="modal" onclick="order.modalHandler('myModal')">
                                 新增指令类别
                             </button>
                         </div>

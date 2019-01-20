@@ -125,6 +125,7 @@ var order = (function () {
      * @param operate
      */
     function modalHandler(domId, callback, operate) {
+        debugger
         $("#" + domId).modal({backdrop: 'static', keyboard: false});
 
         //edit
