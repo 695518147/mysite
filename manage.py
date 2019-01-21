@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 import os
 import sys
-from imp import reload
-
-reload(sys)
+# from imp import reload
+#
+# reload(sys)
 
 if __name__ == '__main__':
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
