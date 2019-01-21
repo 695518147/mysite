@@ -1,5 +1,5 @@
 from django.core import serializers
-from datetime import datetime
+from django.utils import timezone
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
 import djangoUeditor.settings as USettings
@@ -128,7 +128,7 @@ def saveOrder(request):
         Order.objects.create(typeId=typeId, isShowOrder=isShowOrder, orderId=orderId, isShow=isShow,
                              orderName=orderName,
                              orderDescription=orderDescription,
-                             typeDescription=typeDescription, number=number, createTime=datetime.now())
+                             typeDescription=typeDescription, number=number, createTime=timezone.now())
 
     return HttpResponseRedirect("../edit/")
 
@@ -142,7 +142,7 @@ def saveType(request):
         typeId = ""
         for py in pyls:
             typeId = typeId + str(py[0])
-        OrderType.objects.create(typeId=typeId, typeName=typeName, number=number, createTime=datetime.now())
+        OrderType.objects.create(typeId=typeId, typeName=typeName, number=number, createTime=timezone.now())
     orders = OrderType.objects.all()
     return HttpResponse(serializers.serialize("json", orders))
 

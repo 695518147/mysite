@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from datetime import datetime
+from django.utils import timezone
 from blog.models import BlogPost, BlogPostForm
 from django.http import HttpResponse
 
@@ -18,7 +18,7 @@ def create_blogpost(request):
         form = BlogPostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
-            post.timestamp = datetime.now()
+            post.timestamp = timezone.now()
             post.save()
     return redirect('/blog?userId=' + str(post.userId))
 
