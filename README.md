@@ -1,9 +1,39 @@
-# mysite
+### 项目启动会流程
 
-## 1.百度ueditor的使用
+- python版本  
+    3以上
+    
+- 数据库配置  
 
-## 2.jQuery datatable的使用
+```
+    修改mysite文件中的DATABASES的相关配置。
+```
 
-## 3.django-bootstrap3的使用
+- 基础数据与表的创建
 
-## 4.python内置json的自定义日期解析器
+    执行外层mysite目录下的mange.py文件
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+- 服务启动前准备
+
+```
+    1.启动mysql服务
+    2.静态文件同意处理执行：python manage.py collectstatic
+    3.创建超级用户：python manage.py createsuperuser
+``` 
+
+- 两种启动服务
+
+```
+    1.使用uwsgi：
+        启动：start.sh
+        停止：stop.sh
+       
+     2.直接使用manage.py
+        python manage.py runserver 8088 --insecure
+    
+```
+
