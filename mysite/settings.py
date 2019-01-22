@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
     'bootstrap3',
     'djangoUeditor',
     'xiaobing',
@@ -82,7 +81,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'py_test',
+        'NAME': 'xiaobing',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',
