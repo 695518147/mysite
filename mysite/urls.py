@@ -21,7 +21,6 @@ urlpatterns = [
     path('', views.index),
     path('admin/', admin.site.urls),
     path('xadmin/', xadmin.site.urls),
-    path('blog/', include('blog.urls')),
     path('xiaobing/', include('xiaobing.urls')),
     path('info/', views.info),
     path('ueditor/', include('djangoUeditor.urls')),
