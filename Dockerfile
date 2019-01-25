@@ -15,4 +15,4 @@ RUN  echo yes | python manage.py collectstatic
 
 
 
-#CMD ["python", "manage.py" ,"runserver", "9091"]
+CMD ["python", "manage.py" ,"runserver", "9091"]
