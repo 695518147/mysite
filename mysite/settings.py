@@ -76,16 +76,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
-# https://docs.djangoproject.com/en/2.1/ref/settings/#databases
+# https://docs.djangoproject.com/en/2.1/ref/settings/#databases、
 # 数据库配置
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'xiaobing',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT': '3306'
+        'NAME': 'bdm108519644_db',
+        'USER': 'bdm108519644',
+        'PASSWORD': 'jiamisql',
+        'HOST': 'bdm108519644.my3w.com',
+        'PORT': '3306',
+        'OPTIONS': {'isolation_level': None}
     }
 }
 
