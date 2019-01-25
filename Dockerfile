@@ -18,4 +18,4 @@ RUN  python manage.py migrate
 EXPOSE 9091:9091
 
 
-CMD ["python", "manage.py" ,"runserver", "9091"]
+CMD ["python", "manage.py" ,"runserver", "0.0.0.0:9091"]
