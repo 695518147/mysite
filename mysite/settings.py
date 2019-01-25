@@ -83,8 +83,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'xiaobing',
         'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
+        'PASSWORD': 'z?guwrBhH7p>',
+        'HOST': '172.17.137.51',
         'PORT': '3306'
     }
 }
