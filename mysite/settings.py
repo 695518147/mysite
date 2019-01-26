@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'xiaobing',
         'USER': 'root',
         'PASSWORD': 'z?guwrBhH7p>',
-        'HOST': '172.17.137.51',
+        'HOST': '172.18.179.76',
         'PORT': '3306'
     }
 }
