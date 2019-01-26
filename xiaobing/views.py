@@ -13,7 +13,6 @@ import jieba
 import re
 import os
 from urllib import parse
-from django.utils.functional import SimpleLazyObject
 from django.contrib.auth.decorators import login_required
 
 
@@ -62,28 +61,43 @@ def search(request):
         keyword = re.sub(pattern, '?',
                          param['search']['value'].replace(' ', '').replace('<p>', '?').replace('</p>', '?'))
 
+        column = param['order'][0]['column']
         sorts = param['order'][0]['dir']
-        if (sorts == "desc") | (sorts == "DESC"):
-            order_by = "-createTime"
+        if column == 6:
+            if (sorts == "desc") | (sorts == "DESC"):
+                order_by = "-createTime"
+            else:
+                order_by = "createTime"
         else:
-            order_by = "createTime"
+            if (sorts == "desc") | (sorts == "DESC"):
+                order_by = "-number"
+            else:
+                order_by = "number"
+
+        res = Order.objects
+        if "select-ordertype" in param:
+            select_ordertype = param["select-ordertype"]
+            if select_ordertype != '':
+                res = res.filter(Q(typeId=select_ordertype))
+
         # 分词
         arr = " ".join(jieba.cut(keyword)).split(" ")
         q = Q(orderId__icontains=keyword) | Q(typeId__icontains=keyword)
+
         for kw in arr:
             q = q | Q(orderName__icontains=kw)
 
         if keyword in isShow:
             q = Q(isShow__icontains=keyword)
 
-        total_length = Order.objects.filter(q).count()
+        total_length = res.filter(q).count()
 
         page_start = int(param['start'])
         page_end = page_start + page_length
         if page_length == -1:
-            page_data = Order.objects.filter(q).order_by(order_by)
+            page_data = res.filter(q).order_by(order_by)
         else:
-            page_data = Order.objects.filter(q).order_by(order_by)[
+            page_data = res.filter(q).order_by(order_by)[
                         page_start: page_end]
         rest = {
             "iTotalRecords": page_length,  # 本次加载记录数量
@@ -122,9 +136,18 @@ def saveOrder(request):
         orderDescription = request.POST['orderDescription']
         typeDescription = request.POST['typeDescription']
 
+        updateOrderings = Order.objects.filter(typeId=typeId).filter(number__gte=number).order_by("number")
+
+        num = int(number)
+        for order in updateOrderings:
+            num = num + 1
+            order.number = num
+            order.save()
+
         if "edit" == operate:
             order = Order.objects.get(pk=pk)
             order.delete()
+
         Order.objects.create(typeId=typeId, isShowOrder=isShowOrder, orderId=orderId, isShow=isShow,
                              orderName=orderName,
                              orderDescription=orderDescription,

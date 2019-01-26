@@ -5,21 +5,9 @@ $(function () {
         language: {
             url: "/Chinese.json"
         },
-        "dom": "<'row'<'col-sm-8'l><'col-sm-4'<'#toolbar'>f>><'row'<'col-sm-12'tr>><'row'<'col-sm-5'i><'col-sm-7'p>>"
+        "dom": "<'row'<'col-sm-6'l><'col-sm-1'<'#toolbar'>>     <'col-sm-5'f<'#toolbar1'>>    >    <'row'<'col-sm-12'tr>><'row'<'col-sm-5'i><'col-sm-7'p>>"
     });
     order.init();
-
-
-    $("#number,#typeNumber").on("keyup", function (e) {
-        console.log(this.value)
-        var r = /^\+?[1-9][0-9]*$/;　　//判断是否为正整数
-        if (!r.test(this.value)) {
-            layer.msg('只能输入正整数！', {
-                time: 2000 //20s后自动关闭
-            });
-            $("#" + this.id).val("1")
-        }
-    })
 });
 
 var order = (function () {
@@ -28,13 +16,18 @@ var order = (function () {
     /**
      * 初始化表格
      */
-    function initTable() {
+    function initTable(arr) {
         mytable = $("#datatable").DataTable({
             sSource: "/xiaobing/search/",
             serverSide: true,
             bInfo: true,
             //服务器端，数据回调处理
             fnServerData: function (sSource, aDataSet, fnCallback) {
+                var select_ordertype = {
+                    name: "select-ordertype",
+                    value: $("#select-ordertype").val() == undefined ? "" : $("#select-ordertype").val()
+                };
+                aDataSet.push(select_ordertype);
                 $.ajax({
                     "dataType": 'json',
                     "type": "post",
@@ -45,7 +38,7 @@ var order = (function () {
                     }
                 });
             },
-            "aLengthMenu": [[5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, "All"]], // 定义每页显示数据数量
+            "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]], // 定义每页显示数据数量
             aoColumns: [
                 {mData: "orderName", "width": 40, "title": "指令名称", className: "text-center"},
                 {mData: "orderId", "width": 40, "title": "指令代码", className: "text-center"},
@@ -61,6 +54,7 @@ var order = (function () {
                 {mData: "typeDescription", "width": 40, "title": "类别说明", className: "text-center"},
                 {mData: "isShowOrder", "width": 40, "title": "是否显示", className: "text-center"},
                 {mData: "createTime", "width": 40, "title": "创建时间", className: "text-center"},
+                {mData: "number", "width": 40, "title": "排序号", className: "text-center"},
                 {mData: "", "width": 40, "title": "操作", className: "text-center width"},
             ],
             columnDefs: [
@@ -71,16 +65,40 @@ var order = (function () {
                     },
                 },
                 {
-                    targets: [0, 1, 2, 3, 4, 5, 7],
+                    targets: [0, 1, 2, 3, 4, 5, 8],
                     orderable: false,
                     ordering: false
                 },
                 {
-                    targets: [7],
+                    targets: [3],
                     render:
 
                         function (data, type, row, meta) {
                             var str = escape(JSON.stringify(row))
+                            return '<a id="3" href="javascript:void(0)" order="' + str + '" onclick="order.showDescription(this)">指令说明</a>';
+                        },
+                },
+                {
+                    targets: [4],
+                    render:
+
+                        function (data, type, row, meta) {
+                            var str = escape(JSON.stringify(row))
+                            return "<a id='4' href='javascript:void(0)' order='" + str + "' onclick='order.showDescription(this)'>指令类别说明</a>";
+                        },
+                }, {
+                    targets: [7],
+                    render:
+                        function (data, type, row, meta) {
+                            return data;
+                        },
+                },
+                {
+                    targets: [8],
+                    render:
+
+                        function (data, type, row, meta) {
+                            var str = escape(JSON.stringify(row));
                             var arr = [];
                             arr.push('<button type="button" style="margin-left:10px" order=' + str + ' class="btn btn-primary" onclick="order.updateRow(this)">修改</button>')
                             arr.push('<button type="button" style="margin-left:10px" order=' + str + ' class="btn btn-danger" onclick="order.deleteRow(this)">删除</button>')
@@ -104,9 +122,21 @@ var order = (function () {
                 $("input[type=search]").addClass("form-control1");
                 $("#toolbar").append("<a href='JavaScript:void(0)' " +
                     "class='btn btn-primary btn-sm'  onclick=\"order.modalHandler('orderModal','add')\">新建指令</a>");
+                $("#toolbar1").append('<select id="select-ordertype" class="defind-form-control">   </select>');
+                $.get("/xiaobing/getAllOrderType/").done(function (data) {
+                    var json = JSON.parse(data);
+                    var arr = ['<option value="">请选择指令类别</option>'];
+                    $.each(json, function (index, order) {
+                        var option = '<option value="' + order.fields.typeId + '">' + order.fields.typeName + '</option>';
+                        arr.push(option)
+                    });
+                    $("#select-ordertype").empty().append(arr.join())
 
+                });
+                $("#select-ordertype").on("change", function () {
+                    mytable.draw();
+                })
 
-                // datatable
             }
 
             ,
@@ -118,6 +148,25 @@ var order = (function () {
 
     }
 
+    function showDescription(dom) {
+        debugger
+        var order = unescape($(dom).attr("order"));
+        var title = dom.id == 3 ? "指令说明" : "指令类型说明";
+        $("#showDescription").modal();
+        $("#showDescriptionLabel").text(title);
+        if (order != "") {
+            var order = JSON.parse(order);
+            if (dom.id == 3) {
+                $("#showDescriptionBody").html(order.orderDescription)
+            } else {
+                $("#showDescriptionBody").html(order.typeDescription)
+            }
+        } else {
+            $("#showDescriptionBody").html("")
+        }
+
+    }
+
     /**
      * 模态框数据回显
      * @param domId
@@ -125,7 +174,6 @@ var order = (function () {
      * @param operate
      */
     function modalHandler(domId, callback, operate) {
-        debugger
         $("#" + domId).modal({backdrop: 'static', keyboard: false});
 
         //edit
@@ -163,12 +211,11 @@ var order = (function () {
                 var option = '<option value="' + order.fields.typeId + '">' + order.fields.typeName + '</option>';
                 arr.push(option)
             });
-            $("#typeId").empty().append(arr.join())
+            $("#typeId").empty().append(arr.join());
 
         });
 
         initTable();
-
     }
 
     function instanceUE(id) {
@@ -267,6 +314,9 @@ var order = (function () {
         var orderName = getContent('orderName');
         var orderNameText = getContentText('orderName');
         var number = document.getElementById("number").value;
+        if (number == '') {
+            number = 1
+        }
         var orderDescription = getContent('orderDescription');
         var typeDescription = getContent('typeDescription');
 
@@ -317,6 +367,9 @@ var order = (function () {
         var typeNameText = getContentText("typeName");
         var number = document.getElementById("typeNumber").value;
 
+        if (number == '') {
+            number = 1
+        }
         var orderType = {
             typeName: typeName,
             typeNameText: typeNameText,
@@ -379,7 +432,11 @@ var order = (function () {
         },
         saveOrderType: function () {
             saveOrderType()
+        },
+        showDescription: function (dom) {
+            showDescription(dom)
         }
+
     }
 })();
 
