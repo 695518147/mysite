@@ -18,10 +18,11 @@ from xiaobing import views
 xversion.register_models()
 
 urlpatterns = [
-    path('', views.index),
+    # path('', views.index),
     path('admin/', admin.site.urls),
     path('xadmin/', xadmin.site.urls),
-    path('xiaobing/', include('xiaobing.urls')),
+    path('xb', include('xiaobing.urls')),
+    path('xiaobing', include('xiaobing.urls')),
     path('info/', views.info),
     path('ueditor/', include('djangoUeditor.urls')),
 ]

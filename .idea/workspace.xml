@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2d71ab6-9d19-40d2-b17a-e0b09e8e42b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/startdocker.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiaobing/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/xiaobing/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,28 +31,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dockerfile">
+        <entry file="file://$PROJECT_DIR$/mysite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/startdocker.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/startup.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            <state relative-caret-position="147">
+              <caret line="85" column="29" lean-forward="true" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -58,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="116">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -67,37 +51,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/settings.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/xiaobing/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/data/image/2_20190119152437_920.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xiaobing/static/user-defind/order.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="158" column="30" selection-start-line="158" selection-start-column="30" selection-end-line="158" selection-end-column="30" />
+            <state relative-caret-position="240">
+              <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
               <folding>
-                <element signature="e#439#6239#0" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="e#4661#5370#0" />
-                <element signature="e#5393#5982#0" />
-                <element signature="e#6012#6649#0" />
-                <element signature="e#6679#8426#0" />
-                <element signature="e#9409#11107#0" />
-                <element signature="e#11138#12356#0" />
+                <element signature="e#11#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,15 +75,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>LOGIN_REDIRECT_URL</find>
-      <find>login.html</find>
-      <find>Django 管理</find>
-      <find>管理</find>
-      <find>Django[.\s\S]*管理</find>
-      <find>8000</find>
-      <find>alert</find>
-      <find>login-form</find>
-      <find>ordermodal</find>
       <find>han</find>
       <find>modalHandler</find>
       <find>datetime.now()</find>
@@ -138,13 +89,22 @@
       <find>typeDescription</find>
       <find>number.typeNameText = 1</find>
       <find>Order.objects</find>
-      <find>getAllOrderType</find>
       <find>typeNumber</find>
       <find>Number</find>
       <find>showDescription</find>
       <find>updateRow</find>
       <find>debugger</find>
       <find>layer</find>
+      <find>getAllOrderType</find>
+      <find>get</find>
+      <find>$.get</find>
+      <find>xiaobing/s</find>
+      <find>/</find>
+      <find>saveOrder</find>
+      <find>xiaob</find>
+      <find>ajax</find>
+      <find>path('</find>
+      <find>xiaobing</find>
     </findStrings>
     <replaceStrings>
       <replace>post</replace>
@@ -157,7 +117,11 @@
       <replace>false</replace>
       <replace>orderType.number = 1</replace>
       <replace>res</replace>
+      <replace>path('/</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/xiaobing/static/bootstrap-jq</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -170,10 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/DjangoUeditor/models.py" />
-        <option value="$USER_HOME$/.virtualenvs/mysite1/lib/python3.7/site-packages/DjangoUeditor/widgets.py" />
-        <option value="$PROJECT_DIR$/djangoUeditor/adminx.py" />
-        <option value="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/xiaobing/__init__.py" />
         <option value="$PROJECT_DIR$/xiaobing/apps.py" />
         <option value="$PROJECT_DIR$/xadmin/views/base.py" />
@@ -186,8 +146,6 @@
         <option value="$PROJECT_DIR$/error/urls.py" />
         <option value="$PROJECT_DIR$/error/templates/404.html" />
         <option value="$PROJECT_DIR$/error/templates/500.html" />
-        <option value="$PROJECT_DIR$/xiaobing/urls.py" />
-        <option value="$PROJECT_DIR$/xiaobing/urls.py" />
         <option value="$PROJECT_DIR$/error/views.py" />
         <option value="$PROJECT_DIR$/error/templates/400.html" />
         <option value="$PROJECT_DIR$/start/stop.sh" />
@@ -210,17 +168,23 @@
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
-        <option value="$PROJECT_DIR$/mysite/urls.py" />
         <option value="$PROJECT_DIR$/plist.txt" />
         <option value="$PROJECT_DIR$/xiaobing/static/user-defind/order.css" />
-        <option value="$PROJECT_DIR$/xiaobing/views.py" />
-        <option value="$PROJECT_DIR$/xiaobing/views.py" />
-        <option value="$PROJECT_DIR$/xiaobing/static/user-defind/order.js" />
         <option value="$PROJECT_DIR$/xiaobing/templates/add.html" />
         <option value="$PROJECT_DIR$/xiaobing/templates/add.html" />
-        <option value="$PROJECT_DIR$/mysite/settings.py" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/startdocker.sh" />
+        <option value="$PROJECT_DIR$/djangoUeditor/urls.py" />
+        <option value="$PROJECT_DIR$/xiaobing/views.py" />
+        <option value="$PROJECT_DIR$/xiaobing/views.py" />
+        <option value="$PROJECT_DIR$/xiaobing/static/bootstrap-jq/user-defined/user-defined.js" />
+        <option value="$PROJECT_DIR$/mysite/www/user-defind/order.js" />
+        <option value="$PROJECT_DIR$/mysite/www/bootstrap-jq/user-defined/user-defined.js" />
+        <option value="$PROJECT_DIR$/xiaobing/static/user-defind/order.js" />
+        <option value="$PROJECT_DIR$/mysite/settings.py" />
+        <option value="$PROJECT_DIR$/mysite/urls.py" />
+        <option value="$PROJECT_DIR$/xiaobing/urls.py" />
+        <option value="$PROJECT_DIR$/xiaobing/urls.py" />
       </list>
     </option>
   </component>
@@ -241,6 +205,41 @@
             <path>
               <item name="xiaobing" type="b2602c69:ProjectViewProjectNode" />
               <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xiaobing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xiaobing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
+              <item name="mysite" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xiaobing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xiaobing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xiaobing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="user-defind" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xiaobing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaobing" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -301,7 +300,7 @@
       <option name="port" value="8000" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="http://127.0.0.1:8000/xiaobing/edit/" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/xb/edit" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
@@ -350,7 +349,7 @@
       <workItem from="1548230512542" duration="15868000" />
       <workItem from="1548447275411" duration="199000" />
       <workItem from="1548475849368" duration="3846000" />
-      <workItem from="1548485941989" duration="18267000" />
+      <workItem from="1548485941989" duration="23361000" />
     </task>
     <task id="LOCAL-00001" summary="富文本优化">
       <created>1547627070194</created>
@@ -492,7 +491,21 @@
       <option name="project" value="LOCAL" />
       <updated>1548518454439</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="docker 启动文件">
+      <created>1548521913171</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1548521913171</updated>
+    </task>
+    <task id="LOCAL-00022" summary="docker 启动文件">
+      <created>1548522377935</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1548522377935</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -528,7 +541,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="245818000" />
+    <option name="totallyTimeSpent" value="250912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1438" height="877" extended-state="0" />
@@ -540,7 +553,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -548,7 +561,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299363" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49928468" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49928468" weight="0.3299363" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -615,7 +628,8 @@
     <MESSAGE value="pip" />
     <MESSAGE value="端口" />
     <MESSAGE value="mysql" />
-    <option name="LAST_COMMIT_MESSAGE" value="mysql" />
+    <MESSAGE value="docker 启动文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker 启动文件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -654,14 +668,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DockerFile1" />
-    <entry file="file://$PROJECT_DIR$/start/install.sh" />
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.3/python_stubs/-1383683284/sys.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1544" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/tests.py" />
     <entry file="file://$PROJECT_DIR$/xadmin/plugins/importexport.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -793,9 +799,6 @@
     <entry file="file://$PROJECT_DIR$/stop.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/xiaobing.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -888,66 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xiaobing/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="121" column="23" lean-forward="true" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xiaobing/static/user-defind/order.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="158" column="30" selection-start-line="158" selection-start-column="30" selection-end-line="158" selection-end-column="30" />
-          <folding>
-            <element signature="e#439#6239#0" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="e#4661#5370#0" />
-            <element signature="e#5393#5982#0" />
-            <element signature="e#6012#6649#0" />
-            <element signature="e#6679#8426#0" />
-            <element signature="e#9409#11107#0" />
-            <element signature="e#11138#12356#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xiaobing/templates/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#7946#7953#1#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/data/image/2_20190119152437_920.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -960,8 +903,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/startdocker.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+        <state relative-caret-position="15">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoUeditor/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xadmin/templates/xadmin/auth/user/add_form.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiaobing/static/bootstrap-jq/user-defined/user-defined.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="86" column="11" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiaobing.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-224">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiaobing/templates/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="129" column="36" lean-forward="true" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiaobing/static/user-defind/order.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1213">
+          <caret line="256" column="29" selection-start-line="256" selection-start-column="29" selection-end-line="256" selection-end-column="29" />
+          <folding>
+            <element signature="e#11138#12356#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiaobing/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1387">
+          <caret line="155" column="41" selection-start-line="155" selection-start-column="41" selection-end-line="155" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="85" column="29" lean-forward="true" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiaobing/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding>
+            <element signature="e#11#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
