@@ -15,7 +15,7 @@ RUN pip install --no-cache-dir -r  plist.txt
 RUN  echo yes | python manage.py collectstatic
 RUN  python manage.py migrate
 
-EXPOSE 9091:9091
+EXPOSE 80:80
 
 
-CMD ["python", "manage.py" ,"runserver", "0.0.0.0:9091"]
+CMD ["python", "manage.py" ,"runserver", "0.0.0.0:80"]
