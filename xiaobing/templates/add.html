@@ -52,10 +52,13 @@
                     {% csrf_token %}
                     <div class="form-group">
                         <label for="typeId" class="col-sm-2 control-label">指令类别</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-2">
                             <select class="form-control" id="typeId" name="typeId">
                             </select><!-- 按钮触发模态框 -->
-                            <button class="btn btn-primary" type="button" data-toggle="modal" onclick="order.modalHandler('myModal')">
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="btn btn-primary" type="button" style="float: right" data-toggle="modal"
+                                    onclick="order.modalHandler('myModal')">
                                 新增指令类别
                             </button>
                         </div>
@@ -66,22 +69,11 @@
                             <textarea id="orderName" name="orderName" placeholder="指令名称"></textarea>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="orderDescription" class="col-sm-2 control-label">是否显示此条指令</label>
-                        <div class="col-sm-10">
-                            <input type="checkbox" id="isShowOrder" name="isShowOrder" checked/>
-                        </div>
-                    </div>
+
                     <div class="form-group">
                         <label for="orderDescription" class="col-sm-2 control-label">指令说明</label>
                         <div class="col-sm-10">
                             <textarea id="orderDescription" name="orderDescription" placeholder="指令说明"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="orderDescription" class="col-sm-2 control-label">是否显示指令说明</label>
-                        <div class="col-sm-10">
-                            <input type="checkbox" id="isShow" name="isShow" checked/>
                         </div>
                     </div>
                     <div class="form-group">
@@ -91,8 +83,18 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="number" class="col-sm-2 control-label">排序号</label>
-                        <div class="col-sm-10">
+                            <label for="orderDescription" class="col-sm-2 control-label">是否显示此条指令</label>
+                            <div class="col-sm-1">
+                                <input type="checkbox" id="isShowOrder" name="isShowOrder" checked/>
+                            </div>
+
+                        <label for="orderDescription" class="col-sm-2 control-label">是否显示指令说明</label>
+                        <div class="col-sm-1">
+                            <input type="checkbox" id="isShow" name="isShow" checked/>
+                        </div>
+
+                        <label for="number" class="col-sm-1 control-label">排序号</label>
+                        <div class="col-sm-3">
                             <input type="text" class="form-control" id="number" name="number" placeholder="排序号"
                                    value="1">
                         </div>
